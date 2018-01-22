@@ -51,5 +51,25 @@ namespace hrtest.grant
                 changepassword.ShowDialog();
             }
         }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "SendEmail")
+            {
+                frm_grant_changepassword changepassword = new frm_grant_changepassword(Account, Accountpassword);
+                changepassword.ShowDialog();
+            }
+
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Delete")
+            {
+                frm_grant_changepassword changepassword = new frm_grant_changepassword(Account, Accountpassword);
+                changepassword.ShowDialog();
+            }
+
+        }
     }
 }
