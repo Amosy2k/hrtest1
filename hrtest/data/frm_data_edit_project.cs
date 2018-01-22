@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace hrtest
+namespace hrtest.data
 {
-    public partial class Form1 : Form
+    public partial class frm_data_edit_project : Form
     {
-        public Form1()
+        public frm_data_edit_project()
         {
             InitializeComponent();
         }
