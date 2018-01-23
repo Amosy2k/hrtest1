@@ -117,10 +117,303 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;權限管理ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>833, 449</value>
+  </data>
+  <data name="&gt;&gt;修改密碼ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;權限ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_acname.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="人事ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
+  </data>
+  <data name="&gt;&gt;btn_logout.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;中文ToolStripMenuItem.Name" xml:space="preserve">
+    <value>中文ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;btn_logout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>833, 24</value>
+  </data>
+  <data name="&gt;&gt;lb_acname.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lb_acname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="權限管理使用者ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
+  </data>
+  <data name="面談結果ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
+  </data>
+  <data name="設定ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="修改密碼ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
+  </data>
+  <data name="資料管理ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 20</value>
+  </data>
+  <data name="資料編修ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
+  </data>
+  <data name="&gt;&gt;資料編修ToolStripMenuItem.Name" xml:space="preserve">
+    <value>資料編修ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;資料查詢ToolStripMenuItem.Name" xml:space="preserve">
+    <value>資料查詢ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;專案ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="聯繫狀況ToolStripMenuItem.Text" xml:space="preserve">
+    <value>聯繫狀況</value>
+  </data>
+  <data name="lb_acname.Text" xml:space="preserve">
+    <value>lb_acname</value>
+  </data>
+  <data name="語言ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 22</value>
+  </data>
+  <data name="人事ToolStripMenuItem.Text" xml:space="preserve">
+    <value>人事</value>
+  </data>
+  <data name="權限ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="修改密碼ToolStripMenuItem.Text" xml:space="preserve">
+    <value>修改密碼</value>
+  </data>
+  <data name="&gt;&gt;權限管理ToolStripMenuItem.Name" xml:space="preserve">
+    <value>權限管理ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;面談結果ToolStripMenuItem.Name" xml:space="preserve">
+    <value>面談結果ToolStripMenuItem</value>
+  </data>
+  <data name="權限ToolStripMenuItem.Text" xml:space="preserve">
+    <value>權限</value>
+  </data>
+  <data name="資料編修ToolStripMenuItem.Text" xml:space="preserve">
+    <value>資料編修</value>
+  </data>
+  <data name="資料查詢ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
+  </data>
+  <data name="&gt;&gt;中文ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frm_main</value>
+  </data>
+  <data name="&gt;&gt;設定ToolStripMenuItem.Name" xml:space="preserve">
+    <value>設定ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;修改密碼ToolStripMenuItem.Name" xml:space="preserve">
+    <value>修改密碼ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;權限管理管理者ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lb_acname.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="資料查詢ToolStripMenuItem.Text" xml:space="preserve">
+    <value>資料查詢</value>
+  </data>
+  <data name="&gt;&gt;聯繫狀況ToolStripMenuItem.Name" xml:space="preserve">
+    <value>聯繫狀況ToolStripMenuItem</value>
+  </data>
+  <data name="btn_logout.Text" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="&gt;&gt;人事ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;權限管理使用者ToolStripMenuItem.Name" xml:space="preserve">
+    <value>權限管理使用者ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;權限管理管理者ToolStripMenuItem.Name" xml:space="preserve">
+    <value>權限管理管理者ToolStripMenuItem</value>
+  </data>
+  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="權限管理管理者ToolStripMenuItem.Text" xml:space="preserve">
+    <value>權限管理_管理者</value>
+  </data>
+  <data name="&gt;&gt;語言ToolStripMenuItem.Name" xml:space="preserve">
+    <value>語言ToolStripMenuItem</value>
+  </data>
+  <data name="權限管理管理者ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
+  </data>
+  <data name="語言ToolStripMenuItem.Text" xml:space="preserve">
+    <value>語言</value>
+  </data>
+  <data name="&gt;&gt;cultureManager.Type" xml:space="preserve">
+    <value>Infralution.Localization.CultureManager, Infralution.Localization, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="設定ToolStripMenuItem.Text" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="&gt;&gt;聯繫狀況ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;英文ToolStripMenuItem.Name" xml:space="preserve">
+    <value>英文ToolStripMenuItem</value>
+  </data>
+  <data name="btn_logout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="中文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 22</value>
+  </data>
+  <data name="專案ToolStripMenuItem.Text" xml:space="preserve">
+    <value>專案</value>
+  </data>
+  <data name="lb_acname.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btn_logout.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="權限管理ToolStripMenuItem.Text" xml:space="preserve">
+    <value>權限管理</value>
+  </data>
+  <data name="權限管理使用者ToolStripMenuItem.Text" xml:space="preserve">
+    <value>權限管理_使用者</value>
+  </data>
+  <data name="&gt;&gt;lb_acname.Name" xml:space="preserve">
+    <value>lb_acname</value>
+  </data>
+  <data name="資料管理ToolStripMenuItem.Text" xml:space="preserve">
+    <value>資料管理</value>
+  </data>
+  <data name="&gt;&gt;面談結果ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lb_acname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 12</value>
+  </data>
+  <data name="&gt;&gt;人事ToolStripMenuItem.Name" xml:space="preserve">
+    <value>人事ToolStripMenuItem</value>
+  </data>
+  <data name="btn_logout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>frm_main</value>
+  </data>
+  <data name="聯繫狀況ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
+  </data>
+  <data name="&gt;&gt;btn_logout.Name" xml:space="preserve">
+    <value>btn_logout</value>
+  </data>
+  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="權限管理ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
+  </data>
+  <data name="lb_acname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>602, 12</value>
+  </data>
+  <data name="&gt;&gt;設定ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;權限管理使用者ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;資料管理ToolStripMenuItem.Name" xml:space="preserve">
+    <value>資料管理ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;英文ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;語言ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_logout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>746, 1</value>
+  </data>
+  <data name="&gt;&gt;資料管理ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;資料查詢ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;權限ToolStripMenuItem.Name" xml:space="preserve">
+    <value>權限ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="英文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 22</value>
+  </data>
+  <data name="&gt;&gt;cultureManager.Name" xml:space="preserve">
+    <value>cultureManager</value>
+  </data>
+  <data name="專案ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
+  </data>
+  <data name="&gt;&gt;專案ToolStripMenuItem.Name" xml:space="preserve">
+    <value>專案ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;資料編修ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="面談結果ToolStripMenuItem.Text" xml:space="preserve">
+    <value>面談結果</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en-US</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>45</value>
+  </metadata>
+  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cultureManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>136, 17</value>
   </metadata>
 </root>

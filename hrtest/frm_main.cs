@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using Infralution.Localization;
+using System.Globalization;
 
 namespace hrtest
 {
@@ -17,12 +19,14 @@ namespace hrtest
         public static string Accountpassword;
         string cs = ConfigurationManager.ConnectionStrings["User"].ConnectionString;
 
+
         public frm_main(string ac, string acpw)
         {
             InitializeComponent();
             Account = ac;
             Accountpassword = acpw;
             lb_acname.Text = "Hello," + Account;
+            UpdateLanguageMenus();
         }
 
         private void frm_main_Load(object sender, EventArgs e)
@@ -96,6 +100,24 @@ namespace hrtest
             data.frm_data_edit_result data_Edit_Result = new data.frm_data_edit_result();
             data_Edit_Result.MdiParent = this;
             data_Edit_Result.Show();
+        }
+
+
+        private void UpdateLanguageMenus()
+        {
+            CultureInfo culture = CultureManager.ApplicationUICulture;
+            英文ToolStripMenuItem.Checked = (culture.TwoLetterISOLanguageName == "en");
+            中文ToolStripMenuItem.Checked = (culture.TwoLetterISOLanguageName == "chinese");
+        }
+
+        private void 中文ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CultureManager.ApplicationUICulture = new CultureInfo("zh-TW");
+        }
+
+        private void 英文ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CultureManager.ApplicationUICulture = new CultureInfo("en-us");
         }
     }
 }
