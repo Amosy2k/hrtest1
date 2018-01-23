@@ -30,10 +30,10 @@
         {
             this.gb_localuser = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gb_alluser = new System.Windows.Forms.GroupBox();
             this.ChangePassword = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btn_add = new System.Windows.Forms.Button();
+            this.gb_alluser = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btn_add = new System.Windows.Forms.Button();
             this.SendEmail = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gb_localuser.SuspendLayout();
@@ -69,6 +69,14 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // ChangePassword
+            // 
+            this.ChangePassword.HeaderText = "ChangePassword";
+            this.ChangePassword.Name = "ChangePassword";
+            this.ChangePassword.ReadOnly = true;
+            this.ChangePassword.Text = "ChangePassword";
+            this.ChangePassword.UseColumnTextForButtonValue = true;
+            // 
             // gb_alluser
             // 
             this.gb_alluser.Controls.Add(this.dataGridView2);
@@ -80,27 +88,12 @@
             this.gb_alluser.TabStop = false;
             this.gb_alluser.Text = "Alluser";
             // 
-            // ChangePassword
-            // 
-            this.ChangePassword.HeaderText = "ChangePassword";
-            this.ChangePassword.Name = "ChangePassword";
-            this.ChangePassword.ReadOnly = true;
-            this.ChangePassword.Text = "ChangePassword";
-            this.ChangePassword.UseColumnTextForButtonValue = true;
-            // 
-            // btn_add
-            // 
-            this.btn_add.Location = new System.Drawing.Point(7, 22);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(75, 23);
-            this.btn_add.TabIndex = 0;
-            this.btn_add.Text = "新增";
-            this.btn_add.UseVisualStyleBackColor = true;
-            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SendEmail,
@@ -113,12 +106,23 @@
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(7, 22);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.TabIndex = 0;
+            this.btn_add.Text = "新增";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
             // SendEmail
             // 
             this.SendEmail.HeaderText = "SendEmail";
             this.SendEmail.Name = "SendEmail";
             this.SendEmail.ReadOnly = true;
             this.SendEmail.Text = "重發認證信";
+            this.SendEmail.UseColumnTextForLinkValue = true;
             // 
             // Delete
             // 
@@ -136,7 +140,7 @@
             this.Controls.Add(this.gb_alluser);
             this.Controls.Add(this.gb_localuser);
             this.Name = "frm_grant_sa";
-            this.Text = "frm_grant_sa";
+            this.Text = "權限管理_管理者";
             this.Load += new System.EventHandler(this.frm_grant_sa_Load);
             this.gb_localuser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -153,8 +157,8 @@
         private System.Windows.Forms.GroupBox gb_alluser;
         private System.Windows.Forms.DataGridViewButtonColumn ChangePassword;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.DataGridViewLinkColumn SendEmail;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.Button btn_add;
     }
 }

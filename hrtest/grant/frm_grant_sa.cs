@@ -37,6 +37,16 @@ namespace hrtest.grant
             adapt.Fill(ds);
             con.Close();
             dataGridView1.DataSource = ds.Tables[0];
+
+            string cs1 = ConfigurationManager.ConnectionStrings["User"].ConnectionString;
+            SqlConnection con1 = new SqlConnection(cs1);
+            SqlCommand cmd1 = new SqlCommand("Select username, active from [user] ", con1);
+            con1.Open();
+            SqlDataAdapter adapt1 = new SqlDataAdapter(cmd1);
+            DataSet ds1 = new DataSet();
+            adapt1.Fill(ds1);
+            con.Close();
+            dataGridView2.DataSource = ds1.Tables[0];
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -70,6 +80,12 @@ namespace hrtest.grant
                 changepassword.ShowDialog();
             }
 
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            grant.frm_grant_adduser grant_Adduser = new frm_grant_adduser();
+            grant_Adduser.ShowDialog();
         }
     }
 }

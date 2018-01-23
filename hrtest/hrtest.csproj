@@ -80,6 +80,12 @@
     <Compile Include="data\frm_data_search.Designer.cs">
       <DependentUpon>frm_data_search.cs</DependentUpon>
     </Compile>
+    <Compile Include="grant\frm_grant_adduser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="grant\frm_grant_adduser.Designer.cs">
+      <DependentUpon>frm_grant_adduser.cs</DependentUpon>
+    </Compile>
     <Compile Include="grant\frm_grant_changepassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_main.zh-TW.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="grant\frm_grant_adduser.resx">
+      <DependentUpon>frm_grant_adduser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="grant\frm_grant_changepassword.resx">
       <DependentUpon>frm_grant_changepassword.cs</DependentUpon>
