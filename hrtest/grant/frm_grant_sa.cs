@@ -51,11 +51,11 @@ namespace hrtest.grant
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex<0)
+            if (e.RowIndex < 0)
             {
                 return;
             }
-            if(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "ChangePassword")
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "ChangePassword")
             {
                 frm_grant_changepassword changepassword = new frm_grant_changepassword(Account, Accountpassword);
                 changepassword.ShowDialog();
@@ -68,16 +68,37 @@ namespace hrtest.grant
             {
                 return;
             }
-            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "SendEmail")
+            if (dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "SendEmail")
             {
                 frm_grant_changepassword changepassword = new frm_grant_changepassword(Account, Accountpassword);
                 changepassword.ShowDialog();
             }
 
-            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Delete")
+            if (dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Delete")
             {
-                frm_grant_changepassword changepassword = new frm_grant_changepassword(Account, Accountpassword);
-                changepassword.ShowDialog();
+                DialogResult dr = MessageBox.Show("刪除帳號", "確定刪除嗎?", MessageBoxButtons.OKCancel);
+                switch (dr)
+                {
+                    case DialogResult.OK:
+                        SqlConnection con = new SqlConnection(cs);
+                        SqlCommand cmd = new SqlCommand("delete from [user] where username = @username", con);
+                        cmd.Parameters.AddWithValue("@username", dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("刪除成功");
+                        dataGridView2.DataSource = null;
+                        SqlConnection con1 = new SqlConnection(cs);
+                        SqlCommand cmd1 = new SqlCommand("select username, active  from [user]", con1);
+                        con1.Open();
+                        SqlDataAdapter adapt1 = new SqlDataAdapter(cmd1);
+                        DataSet ds1 = new DataSet();
+                        adapt1.Fill(ds1);
+                        con.Close();
+                        dataGridView2.DataSource = ds1.Tables[0];
+                        break;
+                    case DialogResult.Cancel:
+                        break;
+                }
             }
 
         }

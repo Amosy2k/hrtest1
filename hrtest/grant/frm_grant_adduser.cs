@@ -51,6 +51,7 @@ namespace hrtest.grant
             con.Open();
             SqlDataReader dataReader = cmd.ExecuteReader();
             DataSet ds = new DataSet();
+            con.Close();
             if (dataReader.Read())
             {
                 if (dataReader[0].ToString() == "0")
