@@ -33,9 +33,9 @@
             this.ChangePassword = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gb_alluser = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.btn_add = new System.Windows.Forms.Button();
             this.SendEmail = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btn_add = new System.Windows.Forms.Button();
             this.gb_localuser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gb_alluser.SuspendLayout();
@@ -61,11 +61,12 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ChangePassword});
-            this.dataGridView1.Location = new System.Drawing.Point(7, 22);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 18);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(864, 97);
+            this.dataGridView1.Size = new System.Drawing.Size(871, 104);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -106,16 +107,6 @@
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // btn_add
-            // 
-            this.btn_add.Location = new System.Drawing.Point(7, 22);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(75, 23);
-            this.btn_add.TabIndex = 0;
-            this.btn_add.Text = "新增";
-            this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
             // SendEmail
             // 
             this.SendEmail.HeaderText = "SendEmail";
@@ -132,6 +123,16 @@
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(7, 22);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.TabIndex = 0;
+            this.btn_add.Text = "新增";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
             // frm_grant_sa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -141,6 +142,7 @@
             this.Controls.Add(this.gb_localuser);
             this.Name = "frm_grant_sa";
             this.Text = "權限管理_管理者";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_grant_sa_Load);
             this.gb_localuser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

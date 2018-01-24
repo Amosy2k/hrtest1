@@ -101,7 +101,7 @@
             this.Controls.Add(this.tb_password);
             this.Controls.Add(this.tb_account);
             this.Name = "frm_login";
-            this.Text = "HR";
+            this.Text = "亦思人資系統";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

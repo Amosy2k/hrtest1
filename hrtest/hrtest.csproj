@@ -118,6 +118,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="data\frm_data_edit_connection.resx">
+      <DependentUpon>frm_data_edit_connection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\frm_data_search.resx">
+      <DependentUpon>frm_data_search.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>

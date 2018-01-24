@@ -118,6 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="權限ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 20</value>
+  </data>
+  <data name="權限ToolStripMenuItem.Text" xml:space="preserve">
+    <value>權限管理</value>
+  </data>
+  <data name="資料查詢ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="資料編修ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="資料編修ToolStripMenuItem.Text" xml:space="preserve">
+    <value>聯繫狀況</value>
+  </data>
+  <data name="面談結果ToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="面談結果ToolStripMenuItem1.Text" xml:space="preserve">
+    <value>面談結果</value>
+  </data>
+  <data name="權限管理ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
+  </data>
+  <data name="權限管理ToolStripMenuItem.Text" xml:space="preserve">
+    <value>權限管理_管理者</value>
+  </data>
   <data name="中文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 22</value>
   </data>
@@ -132,5 +159,14 @@
   </data>
   <data name="lb_acname.Location" type="System.Drawing.Point, System.Drawing">
     <value>592, 9</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>人資系統首頁</value>
+  </data>
+  <data name="權限管理使用者ToolStripMenuItem1.Text" xml:space="preserve">
+    <value>權限管理_使用者</value>
+  </data>
+  <data name="修改密碼ToolStripMenuItem1.Text" xml:space="preserve">
+    <value>修改密碼</value>
   </data>
 </root>

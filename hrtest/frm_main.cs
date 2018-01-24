@@ -46,20 +46,6 @@ namespace hrtest
             Application.Exit();
         }
 
-        private void 權限管理管理者ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            grant.frm_grant_sa grant_Sa = new grant.frm_grant_sa(Account, Accountpassword);
-            grant_Sa.MdiParent = this;
-            grant_Sa.Show();
-        }
-
-        private void 權限管理使用者ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            grant.frm_grant_user grant_User = new grant.frm_grant_user(Account,Accountpassword);
-            grant_User.MdiParent = this;
-            grant_User.Show();
-        }
-
         private void 修改密碼ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             grant.frm_grant_changepassword grant_Changepassword = new grant.frm_grant_changepassword(Account,Accountpassword);
@@ -118,6 +104,20 @@ namespace hrtest
         private void 英文ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CultureManager.ApplicationUICulture = new CultureInfo("en-us");
+        }
+
+        private void 權限管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            grant.frm_grant_sa grant_Sa = new grant.frm_grant_sa(Account, Accountpassword);
+            grant_Sa.MdiParent = this;
+            grant_Sa.Show();
+        }
+
+        private void 權限管理使用者ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            grant.frm_grant_user grant_User = new grant.frm_grant_user(Account, Accountpassword);
+            grant_User.MdiParent = this;
+            grant_User.Show();
         }
     }
 }
