@@ -118,6 +118,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_data_interview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_data_interview.Designer.cs">
+      <DependentUpon>UC_data_interview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_data_project.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_data_project.Designer.cs">
+      <DependentUpon>UC_data_project.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="data\frm_data_edit_connection.resx">
       <DependentUpon>frm_data_edit_connection.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +170,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC_data_interview.resx">
+      <DependentUpon>UC_data_interview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_data_project.resx">
+      <DependentUpon>UC_data_project.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -175,6 +193,7 @@
     <Content Include="pic\correct.jpg" />
     <Content Include="pic\error.jpg" />
     <Content Include="pic\island.jpg" />
+    <None Include="Resources\nopic.jpg" />
     <None Include="Resources\error.jpg" />
     <None Include="Resources\correct.jpg" />
   </ItemGroup>
