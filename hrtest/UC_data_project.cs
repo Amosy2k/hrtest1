@@ -32,5 +32,15 @@ namespace hrtest
                 ondeleteclick(e);
             }
         }
+
+        private void btn_profile_interviewdate_Click(object sender, EventArgs e)
+        {
+            data.frm_data_calander calander = new data.frm_data_calander();
+
+            if (calander.ShowDialog() == DialogResult.OK)
+            {
+                tb_date.Text = calander.Calandervalue;
+            }
+        }
     }
 }
