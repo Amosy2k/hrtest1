@@ -202,11 +202,13 @@
             this.btn_delete.TabIndex = 18;
             this.btn_delete.Text = "刪除";
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // UC_data_project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.rtb_scribe);
             this.Controls.Add(this.lb_projectscribe);
@@ -227,7 +229,7 @@
             this.Controls.Add(this.tb_company);
             this.Controls.Add(this.lb_company);
             this.Name = "UC_data_project";
-            this.Size = new System.Drawing.Size(711, 473);
+            this.Size = new System.Drawing.Size(707, 469);
             this.ResumeLayout(false);
             this.PerformLayout();
 

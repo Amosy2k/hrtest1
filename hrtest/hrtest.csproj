@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="data\frm_data_calander.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data\frm_data_calander.Designer.cs">
+      <DependentUpon>frm_data_calander.cs</DependentUpon>
+    </Compile>
     <Compile Include="data\frm_data_edit_connection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     <Compile Include="UC_data_project.Designer.cs">
       <DependentUpon>UC_data_project.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="data\frm_data_calander.resx">
+      <DependentUpon>frm_data_calander.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="data\frm_data_edit_connection.resx">
       <DependentUpon>frm_data_edit_connection.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +202,7 @@
     <Content Include="pic\correct.jpg" />
     <Content Include="pic\error.jpg" />
     <Content Include="pic\island.jpg" />
+    <None Include="Resources\calander.jpg" />
     <None Include="Resources\nopic.jpg" />
     <None Include="Resources\error.jpg" />
     <None Include="Resources\correct.jpg" />

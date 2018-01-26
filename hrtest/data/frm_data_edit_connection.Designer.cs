@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tc_connection = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tp_contact = new System.Windows.Forms.TabPage();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_accept = new System.Windows.Forms.Button();
@@ -53,55 +53,60 @@
             this.lb_name = new System.Windows.Forms.Label();
             this.lb_lastpdatetimetm = new System.Windows.Forms.Label();
             this.lb_lastupdatetimelb = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tp_interviewdata = new System.Windows.Forms.TabPage();
+            this.uC_data_interview1 = new hrtest.UC_data_interview();
+            this.tp_add = new System.Windows.Forms.TabPage();
             this.tc_connection.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tp_contact.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tp_interviewdata.SuspendLayout();
             this.SuspendLayout();
             // 
             // tc_connection
             // 
-            this.tc_connection.Controls.Add(this.tabPage1);
-            this.tc_connection.Controls.Add(this.tabPage2);
+            this.tc_connection.Controls.Add(this.tp_contact);
+            this.tc_connection.Controls.Add(this.tp_interviewdata);
+            this.tc_connection.Controls.Add(this.tp_add);
             this.tc_connection.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tc_connection.Location = new System.Drawing.Point(0, 0);
             this.tc_connection.Name = "tc_connection";
             this.tc_connection.SelectedIndex = 0;
-            this.tc_connection.Size = new System.Drawing.Size(877, 873);
+            this.tc_connection.Size = new System.Drawing.Size(1158, 873);
             this.tc_connection.TabIndex = 0;
+            this.tc_connection.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tc_connection_MouseDown);
             // 
-            // tabPage1
+            // tp_contact
             // 
-            this.tabPage1.Controls.Add(this.btn_delete);
-            this.tabPage1.Controls.Add(this.btn_cancel);
-            this.tabPage1.Controls.Add(this.btn_accept);
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Controls.Add(this.btn_create);
-            this.tabPage1.Controls.Add(this.cb_status);
-            this.tabPage1.Controls.Add(this.lb_status);
-            this.tabPage1.Controls.Add(this.cb_cooperation);
-            this.tabPage1.Controls.Add(this.lb_cooperation);
-            this.tabPage1.Controls.Add(this.tb_skill);
-            this.tabPage1.Controls.Add(this.lb_skill);
-            this.tabPage1.Controls.Add(this.tb_address);
-            this.tabPage1.Controls.Add(this.lb_address);
-            this.tabPage1.Controls.Add(this.tb_email);
-            this.tabPage1.Controls.Add(this.lb_email);
-            this.tabPage1.Controls.Add(this.cb_sex);
-            this.tabPage1.Controls.Add(this.lb_sex);
-            this.tabPage1.Controls.Add(this.tb_code);
-            this.tabPage1.Controls.Add(this.lb_code);
-            this.tabPage1.Controls.Add(this.tb_name);
-            this.tabPage1.Controls.Add(this.lb_name);
-            this.tabPage1.Controls.Add(this.lb_lastpdatetimetm);
-            this.tabPage1.Controls.Add(this.lb_lastupdatetimelb);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(869, 847);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "聯繫狀況";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tp_contact.Controls.Add(this.btn_delete);
+            this.tp_contact.Controls.Add(this.btn_cancel);
+            this.tp_contact.Controls.Add(this.btn_accept);
+            this.tp_contact.Controls.Add(this.dataGridView1);
+            this.tp_contact.Controls.Add(this.btn_create);
+            this.tp_contact.Controls.Add(this.cb_status);
+            this.tp_contact.Controls.Add(this.lb_status);
+            this.tp_contact.Controls.Add(this.cb_cooperation);
+            this.tp_contact.Controls.Add(this.lb_cooperation);
+            this.tp_contact.Controls.Add(this.tb_skill);
+            this.tp_contact.Controls.Add(this.lb_skill);
+            this.tp_contact.Controls.Add(this.tb_address);
+            this.tp_contact.Controls.Add(this.lb_address);
+            this.tp_contact.Controls.Add(this.tb_email);
+            this.tp_contact.Controls.Add(this.lb_email);
+            this.tp_contact.Controls.Add(this.cb_sex);
+            this.tp_contact.Controls.Add(this.lb_sex);
+            this.tp_contact.Controls.Add(this.tb_code);
+            this.tp_contact.Controls.Add(this.lb_code);
+            this.tp_contact.Controls.Add(this.tb_name);
+            this.tp_contact.Controls.Add(this.lb_name);
+            this.tp_contact.Controls.Add(this.lb_lastpdatetimetm);
+            this.tp_contact.Controls.Add(this.lb_lastupdatetimelb);
+            this.tp_contact.Location = new System.Drawing.Point(4, 22);
+            this.tp_contact.Name = "tp_contact";
+            this.tp_contact.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_contact.Size = new System.Drawing.Size(1150, 847);
+            this.tp_contact.TabIndex = 0;
+            this.tp_contact.Text = "聯繫狀況";
+            this.tp_contact.UseVisualStyleBackColor = true;
             // 
             // btn_delete
             // 
@@ -207,9 +212,9 @@
             // 
             // tb_address
             // 
-            this.tb_address.Location = new System.Drawing.Point(258, 4);
+            this.tb_address.Location = new System.Drawing.Point(282, 4);
             this.tb_address.Name = "tb_address";
-            this.tb_address.Size = new System.Drawing.Size(394, 22);
+            this.tb_address.Size = new System.Drawing.Size(370, 22);
             this.tb_address.TabIndex = 11;
             // 
             // lb_address
@@ -307,29 +312,52 @@
             this.lb_lastupdatetimelb.TabIndex = 0;
             this.lb_lastupdatetimelb.Text = "LastUpdateTime：";
             // 
-            // tabPage2
+            // tp_interviewdata
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(869, 847);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "面談資料";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tp_interviewdata.Controls.Add(this.uC_data_interview1);
+            this.tp_interviewdata.Location = new System.Drawing.Point(4, 22);
+            this.tp_interviewdata.Name = "tp_interviewdata";
+            this.tp_interviewdata.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_interviewdata.Size = new System.Drawing.Size(1150, 847);
+            this.tp_interviewdata.TabIndex = 1;
+            this.tp_interviewdata.Text = "面談資料";
+            this.tp_interviewdata.UseVisualStyleBackColor = true;
+            // 
+            // uC_data_interview1
+            // 
+            this.uC_data_interview1.AutoScroll = true;
+            this.uC_data_interview1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_data_interview1.Location = new System.Drawing.Point(3, 3);
+            this.uC_data_interview1.Name = "uC_data_interview1";
+            this.uC_data_interview1.Size = new System.Drawing.Size(1144, 841);
+            this.uC_data_interview1.TabIndex = 0;
+            // 
+            // tp_add
+            // 
+            this.tp_add.Location = new System.Drawing.Point(4, 22);
+            this.tp_add.Name = "tp_add";
+            this.tp_add.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_add.Size = new System.Drawing.Size(1150, 847);
+            this.tp_add.TabIndex = 2;
+            this.tp_add.Text = "+";
+            this.tp_add.UseVisualStyleBackColor = true;
             // 
             // frm_data_edit_connection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 873);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1158, 873);
             this.Controls.Add(this.tc_connection);
             this.Name = "frm_data_edit_connection";
             this.Text = "data_edit_connection";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frm_data_edit_connection_Load);
             this.tc_connection.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tp_contact.ResumeLayout(false);
+            this.tp_contact.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tp_interviewdata.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -337,7 +365,7 @@
         #endregion
 
         private System.Windows.Forms.TabControl tc_connection;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tp_contact;
         private System.Windows.Forms.ComboBox cb_cooperation;
         private System.Windows.Forms.Label lb_cooperation;
         private System.Windows.Forms.TextBox tb_skill;
@@ -354,7 +382,7 @@
         private System.Windows.Forms.Label lb_name;
         private System.Windows.Forms.Label lb_lastpdatetimetm;
         private System.Windows.Forms.Label lb_lastupdatetimelb;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tp_interviewdata;
         private System.Windows.Forms.ComboBox cb_status;
         private System.Windows.Forms.Label lb_status;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -362,5 +390,7 @@
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_accept;
+        private UC_data_interview uC_data_interview1;
+        private System.Windows.Forms.TabPage tp_add;
     }
 }
