@@ -136,6 +136,7 @@
             this.btn_profile_upload = new System.Windows.Forms.Button();
             this.pb_profile_profileimg = new System.Windows.Forms.PictureBox();
             this.tp_project = new System.Windows.Forms.TabPage();
+            this.tlp_project_list = new System.Windows.Forms.TableLayoutPanel();
             this.btn_project_delete = new System.Windows.Forms.Button();
             this.btn_project_cancel = new System.Windows.Forms.Button();
             this.btn_project_ok = new System.Windows.Forms.Button();
@@ -158,7 +159,6 @@
             this.rb_result_no = new System.Windows.Forms.RadioButton();
             this.rb_result_yes = new System.Windows.Forms.RadioButton();
             this.btn_result_commandcreate = new System.Windows.Forms.Button();
-            this.tlp_project_list = new System.Windows.Forms.TableLayoutPanel();
             this.tc_interview.SuspendLayout();
             this.tp_profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_profile_languageskill)).BeginInit();
@@ -342,6 +342,7 @@
             this.btn_profile_delete.TabIndex = 136;
             this.btn_profile_delete.Text = "刪除";
             this.btn_profile_delete.UseVisualStyleBackColor = true;
+            this.btn_profile_delete.Click += new System.EventHandler(this.btn_profile_delete_Click);
             // 
             // btn_profile_cancel
             // 
@@ -951,7 +952,7 @@
             // lb_profile_lastpdatetimetm
             // 
             this.lb_profile_lastpdatetimetm.AutoSize = true;
-            this.lb_profile_lastpdatetimetm.Location = new System.Drawing.Point(739, 47);
+            this.lb_profile_lastpdatetimetm.Location = new System.Drawing.Point(828, 47);
             this.lb_profile_lastpdatetimetm.Name = "lb_profile_lastpdatetimetm";
             this.lb_profile_lastpdatetimetm.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_lastpdatetimetm.TabIndex = 33;
@@ -960,7 +961,7 @@
             // lb_profile_lastpdatetimelb
             // 
             this.lb_profile_lastpdatetimelb.AutoSize = true;
-            this.lb_profile_lastpdatetimelb.Location = new System.Drawing.Point(639, 47);
+            this.lb_profile_lastpdatetimelb.Location = new System.Drawing.Point(728, 47);
             this.lb_profile_lastpdatetimelb.Name = "lb_profile_lastpdatetimelb";
             this.lb_profile_lastpdatetimelb.Size = new System.Drawing.Size(93, 12);
             this.lb_profile_lastpdatetimelb.TabIndex = 32;
@@ -1255,6 +1256,18 @@
             this.tp_project.Text = "專案經驗";
             this.tp_project.UseVisualStyleBackColor = true;
             // 
+            // tlp_project_list
+            // 
+            this.tlp_project_list.AutoScroll = true;
+            this.tlp_project_list.ColumnCount = 1;
+            this.tlp_project_list.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlp_project_list.Location = new System.Drawing.Point(35, 71);
+            this.tlp_project_list.Name = "tlp_project_list";
+            this.tlp_project_list.RowCount = 1;
+            this.tlp_project_list.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlp_project_list.Size = new System.Drawing.Size(866, 381);
+            this.tlp_project_list.TabIndex = 20;
+            // 
             // btn_project_delete
             // 
             this.btn_project_delete.Location = new System.Drawing.Point(719, 594);
@@ -1475,18 +1488,6 @@
             this.btn_result_commandcreate.TabIndex = 6;
             this.btn_result_commandcreate.Text = "新增面談評語";
             this.btn_result_commandcreate.UseVisualStyleBackColor = true;
-            // 
-            // tlp_project_list
-            // 
-            this.tlp_project_list.AutoScroll = true;
-            this.tlp_project_list.ColumnCount = 1;
-            this.tlp_project_list.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlp_project_list.Location = new System.Drawing.Point(35, 71);
-            this.tlp_project_list.Name = "tlp_project_list";
-            this.tlp_project_list.RowCount = 1;
-            this.tlp_project_list.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlp_project_list.Size = new System.Drawing.Size(866, 381);
-            this.tlp_project_list.TabIndex = 20;
             // 
             // UC_data_interview
             // 

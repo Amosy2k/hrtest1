@@ -12,7 +12,12 @@ namespace hrtest
 {
     public partial class UC_data_interview : UserControl
     {
+        public event EventHandler deleteclick;
 
+        protected void ondeleteclick(EventArgs e)
+        {
+            deleteclick?.Invoke(this, e);
+        }
 
         public UC_data_interview()
         {
@@ -46,8 +51,6 @@ namespace hrtest
                 tlp_project_list.RowCount = tlp_project_list.RowCount + 1;
             }
             UC_data_project uC_Data_Project = new UC_data_project();
-            //tlp_project_list.RowCount = tlp_project_list.RowCount + 1;
-            //tlp_project_list.RowStyles.Add(new RowStyle());
             tlp_project_list.Controls.Add(uC_Data_Project, 1, tlp_project_list.RowCount - 1);
 
             uC_Data_Project.deleteclick += UC_Data_Project_deleteclick;
@@ -58,7 +61,15 @@ namespace hrtest
             UC_data_project uC_Data_Project = sender as UC_data_project;
             tlp_project_list.Controls.Remove(uC_Data_Project);
             tlp_project_list.RowCount -= 1;
-            //throw new NotImplementedException();
+        }
+
+        private void btn_profile_delete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("是否要刪除資料", "警告", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                ondeleteclick(e);
+            }
         }
     }
 }
