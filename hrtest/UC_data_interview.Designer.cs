@@ -187,6 +187,7 @@
             // 
             // tp_profile
             // 
+            this.tp_profile.AutoScroll = true;
             this.tp_profile.Controls.Add(this.btn_profile_birthday);
             this.tp_profile.Controls.Add(this.btn_profile_interviewdate);
             this.tp_profile.Controls.Add(this.tb_profile_birthday);
@@ -1227,6 +1228,7 @@
             this.btn_profile_upload.TabIndex = 1;
             this.btn_profile_upload.Text = "上傳";
             this.btn_profile_upload.UseVisualStyleBackColor = true;
+            this.btn_profile_upload.Click += new System.EventHandler(this.btn_profile_upload_Click);
             // 
             // pb_profile_profileimg
             // 
@@ -1516,10 +1518,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button btn_project_delete;
         private System.Windows.Forms.Button btn_project_cancel;
         private System.Windows.Forms.Button btn_project_ok;
@@ -1638,7 +1636,6 @@
         private System.Windows.Forms.Button btn_result_delete;
         private System.Windows.Forms.Button btn_result_cancel;
         private System.Windows.Forms.Button btn_result_ok;
-        private System.Windows.Forms.RichTextBox rtb_notes;
         private System.Windows.Forms.Label lb_project_title;
         private System.Windows.Forms.Label lb_result_lastpdatetimetm;
         private System.Windows.Forms.Label lb_result_lastpdatetimelb;

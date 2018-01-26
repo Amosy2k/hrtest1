@@ -67,20 +67,6 @@ namespace hrtest
             data_Edit_Connection.Show();
         }
 
-        private void 人事ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            data.frm_data_edit_profile data_Edit_Profile = new data.frm_data_edit_profile();
-            data_Edit_Profile.MdiParent = this;
-            data_Edit_Profile.Show();
-        }
-
-        private void 專案ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            data.frm_data_edit_profile data_Edit_Profile = new data.frm_data_edit_profile();
-            data_Edit_Profile.MdiParent = this;
-            data_Edit_Profile.Show();
-        }
-
         private void 面談結果ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             data.frm_data_edit_result data_Edit_Result = new data.frm_data_edit_result();

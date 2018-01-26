@@ -62,18 +62,6 @@
     <Compile Include="data\frm_data_edit_connection.Designer.cs">
       <DependentUpon>frm_data_edit_connection.cs</DependentUpon>
     </Compile>
-    <Compile Include="data\frm_data_edit_profile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="data\frm_data_edit_profile.Designer.cs">
-      <DependentUpon>frm_data_edit_profile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="data\frm_data_edit_project.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="data\frm_data_edit_project.Designer.cs">
-      <DependentUpon>frm_data_edit_project.cs</DependentUpon>
-    </Compile>
     <Compile Include="data\frm_data_edit_result.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="data\frm_data_edit_connection.resx">
       <DependentUpon>frm_data_edit_connection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\frm_data_edit_result.resx">
+      <DependentUpon>frm_data_edit_result.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="data\frm_data_search.resx">
       <DependentUpon>frm_data_search.cs</DependentUpon>

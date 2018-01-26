@@ -79,7 +79,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_grant_user";
             this.Text = "權限管理_使用者";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_grant_user_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

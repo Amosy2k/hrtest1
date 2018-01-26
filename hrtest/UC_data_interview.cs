@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace hrtest
 {
     public partial class UC_data_interview : UserControl
@@ -40,7 +41,7 @@ namespace hrtest
 
             if (calander.ShowDialog() == DialogResult.OK)
             {
-                tb_profile_birthday.Text = calander.Calandervalue;
+                tb_profile_interviewdate.Text = calander.Calandervalue;
             }
         }
 
@@ -69,6 +70,22 @@ namespace hrtest
             if (result == DialogResult.Yes)
             {
                 ondeleteclick(e);
+            }
+        }
+
+        private void btn_profile_upload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog
+            {
+                Title = "upload...",
+                Filter = @"All image files|*.jpg;",
+                Multiselect = false,
+                RestoreDirectory = true
+            };
+
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                pb_profile_profileimg.ImageLocation = ofd.FileName;
             }
         }
     }

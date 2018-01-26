@@ -71,7 +71,7 @@
             this.tc_connection.Location = new System.Drawing.Point(0, 0);
             this.tc_connection.Name = "tc_connection";
             this.tc_connection.SelectedIndex = 0;
-            this.tc_connection.Size = new System.Drawing.Size(1158, 873);
+            this.tc_connection.Size = new System.Drawing.Size(1158, 865);
             this.tc_connection.TabIndex = 0;
             this.tc_connection.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tc_connection_MouseDown);
             // 
@@ -103,7 +103,7 @@
             this.tp_contact.Location = new System.Drawing.Point(4, 22);
             this.tp_contact.Name = "tp_contact";
             this.tp_contact.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_contact.Size = new System.Drawing.Size(1150, 847);
+            this.tp_contact.Size = new System.Drawing.Size(1150, 839);
             this.tp_contact.TabIndex = 0;
             this.tp_contact.Text = "聯繫狀況";
             this.tp_contact.UseVisualStyleBackColor = true;
@@ -347,11 +347,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1158, 873);
+            this.ClientSize = new System.Drawing.Size(1158, 865);
             this.Controls.Add(this.tc_connection);
             this.Name = "frm_data_edit_connection";
             this.Text = "data_edit_connection";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_data_edit_connection_Load);
             this.tc_connection.ResumeLayout(false);
             this.tp_contact.ResumeLayout(false);

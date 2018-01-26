@@ -16,5 +16,49 @@ namespace hrtest.data
         {
             InitializeComponent();
         }
+
+        private void btn_search_interviewdate_start_Click(object sender, EventArgs e)
+        {
+            data.frm_data_calander calander = new data.frm_data_calander();
+
+            if (calander.ShowDialog() == DialogResult.OK)
+            {
+                lb_interviewdatefirst.Text = calander.Calandervalue;
+                lb_interviewdatefirst.Visible = true;
+            }
+        }
+
+        private void btn_search_interviewdate_end_Click(object sender, EventArgs e)
+        {
+            data.frm_data_calander calander = new data.frm_data_calander();
+
+            if (calander.ShowDialog() == DialogResult.OK)
+            {
+                lb_interviewdatelast.Text = calander.Calandervalue;
+                lb_interviewdatelast.Visible = true;
+            }
+        }
+
+        private void btn_search_lastupdatedate_start_Click(object sender, EventArgs e)
+        {
+            data.frm_data_calander calander = new data.frm_data_calander();
+
+            if (calander.ShowDialog() == DialogResult.OK)
+            {
+                lb_lastupdatefirst.Text = calander.Calandervalue;
+                lb_lastupdatefirst.Visible = true;
+            }
+        }
+
+        private void btn_search_lastupdatedate_end_Click(object sender, EventArgs e)
+        {
+            data.frm_data_calander calander = new data.frm_data_calander();
+
+            if (calander.ShowDialog() == DialogResult.OK)
+            {
+                lb_lastupdatelast.Text = calander.Calandervalue;
+                lb_lastupdatelast.Visible = true;
+            }
+        }
     }
 }

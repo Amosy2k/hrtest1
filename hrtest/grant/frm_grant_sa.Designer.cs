@@ -142,7 +142,6 @@
             this.Controls.Add(this.gb_localuser);
             this.Name = "frm_grant_sa";
             this.Text = "權限管理_管理者";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_grant_sa_Load);
             this.gb_localuser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
