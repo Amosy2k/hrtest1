@@ -56,6 +56,7 @@
             this.tp_interviewdata = new System.Windows.Forms.TabPage();
             this.tp_add = new System.Windows.Forms.TabPage();
             this.uC_data_interview1 = new hrtest.UC_data_interview();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tc_connection.SuspendLayout();
             this.tp_contact.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -138,9 +139,15 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Delete});
             this.dataGridView1.Location = new System.Drawing.Point(11, 190);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(851, 207);
             this.dataGridView1.TabIndex = 19;
@@ -344,6 +351,13 @@
             this.uC_data_interview1.Size = new System.Drawing.Size(1144, 833);
             this.uC_data_interview1.TabIndex = 0;
             // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
             // frm_data_edit_connection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -393,5 +407,6 @@
         private System.Windows.Forms.Button btn_accept;
         private UC_data_interview uC_data_interview1;
         private System.Windows.Forms.TabPage tp_add;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }
