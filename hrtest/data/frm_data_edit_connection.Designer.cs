@@ -54,8 +54,8 @@
             this.lb_lastpdatetimetm = new System.Windows.Forms.Label();
             this.lb_lastupdatetimelb = new System.Windows.Forms.Label();
             this.tp_interviewdata = new System.Windows.Forms.TabPage();
-            this.uC_data_interview1 = new hrtest.UC_data_interview();
             this.tp_add = new System.Windows.Forms.TabPage();
+            this.uC_data_interview1 = new hrtest.UC_data_interview();
             this.tc_connection.SuspendLayout();
             this.tp_contact.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -110,7 +110,7 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(636, 518);
+            this.btn_delete.Location = new System.Drawing.Point(635, 518);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(75, 23);
             this.btn_delete.TabIndex = 22;
@@ -125,6 +125,7 @@
             this.btn_cancel.TabIndex = 21;
             this.btn_cancel.Text = "取消";
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_accept
             // 
@@ -152,6 +153,7 @@
             this.btn_create.TabIndex = 18;
             this.btn_create.Text = "新增";
             this.btn_create.UseVisualStyleBackColor = true;
+            this.btn_create.Click += new System.EventHandler(this.btn_create_Click);
             // 
             // cb_status
             // 
@@ -299,9 +301,9 @@
             this.lb_lastpdatetimetm.AutoSize = true;
             this.lb_lastpdatetimetm.Location = new System.Drawing.Point(771, 14);
             this.lb_lastpdatetimetm.Name = "lb_lastpdatetimetm";
-            this.lb_lastpdatetimetm.Size = new System.Drawing.Size(29, 12);
+            this.lb_lastpdatetimetm.Size = new System.Drawing.Size(17, 12);
             this.lb_lastpdatetimetm.TabIndex = 1;
-            this.lb_lastpdatetimetm.Text = "Time";
+            this.lb_lastpdatetimetm.Text = "---";
             // 
             // lb_lastupdatetimelb
             // 
@@ -318,10 +320,20 @@
             this.tp_interviewdata.Location = new System.Drawing.Point(4, 22);
             this.tp_interviewdata.Name = "tp_interviewdata";
             this.tp_interviewdata.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_interviewdata.Size = new System.Drawing.Size(1150, 847);
+            this.tp_interviewdata.Size = new System.Drawing.Size(1150, 839);
             this.tp_interviewdata.TabIndex = 1;
             this.tp_interviewdata.Text = "面談資料";
             this.tp_interviewdata.UseVisualStyleBackColor = true;
+            // 
+            // tp_add
+            // 
+            this.tp_add.Location = new System.Drawing.Point(4, 22);
+            this.tp_add.Name = "tp_add";
+            this.tp_add.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_add.Size = new System.Drawing.Size(1150, 839);
+            this.tp_add.TabIndex = 2;
+            this.tp_add.Text = "+";
+            this.tp_add.UseVisualStyleBackColor = true;
             // 
             // uC_data_interview1
             // 
@@ -329,18 +341,8 @@
             this.uC_data_interview1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_data_interview1.Location = new System.Drawing.Point(3, 3);
             this.uC_data_interview1.Name = "uC_data_interview1";
-            this.uC_data_interview1.Size = new System.Drawing.Size(1144, 841);
+            this.uC_data_interview1.Size = new System.Drawing.Size(1144, 833);
             this.uC_data_interview1.TabIndex = 0;
-            // 
-            // tp_add
-            // 
-            this.tp_add.Location = new System.Drawing.Point(4, 22);
-            this.tp_add.Name = "tp_add";
-            this.tp_add.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_add.Size = new System.Drawing.Size(1150, 847);
-            this.tp_add.TabIndex = 2;
-            this.tp_add.Text = "+";
-            this.tp_add.UseVisualStyleBackColor = true;
             // 
             // frm_data_edit_connection
             // 

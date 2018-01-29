@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace hrtest.data
 {
@@ -19,8 +21,7 @@ namespace hrtest.data
 
         private void frm_data_edit_connection_Load(object sender, EventArgs e)
         {
-            //UC_data_interview uC_Data_Interview = new UC_data_interview();
-            //tabPage2.Controls.Add(uC_Data_Interview);
+
         }
 
         private void tc_connection_MouseDown(object sender, MouseEventArgs e)
@@ -37,6 +38,16 @@ namespace hrtest.data
                 };
                 tc_connection.TabPages[lastIndex].Controls.Add(uC_Data_Interview);
             }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_create_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

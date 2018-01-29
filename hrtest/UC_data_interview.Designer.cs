@@ -30,6 +30,7 @@
         {
             this.tc_interview = new System.Windows.Forms.TabControl();
             this.tp_profile = new System.Windows.Forms.TabPage();
+            this.lb_profile_army = new System.Windows.Forms.Label();
             this.btn_profile_birthday = new System.Windows.Forms.Button();
             this.btn_profile_interviewdate = new System.Windows.Forms.Button();
             this.tb_profile_birthday = new System.Windows.Forms.TextBox();
@@ -159,6 +160,10 @@
             this.rb_result_no = new System.Windows.Forms.RadioButton();
             this.rb_result_yes = new System.Windows.Forms.RadioButton();
             this.btn_result_commandcreate = new System.Windows.Forms.Button();
+            this.tb_profile_armyitem = new System.Windows.Forms.TextBox();
+            this.lb_profile_armyitem = new System.Windows.Forms.Label();
+            this.lb_profile_noarmyreason = new System.Windows.Forms.Label();
+            this.tb_profile_noarmyreason = new System.Windows.Forms.TextBox();
             this.tc_interview.SuspendLayout();
             this.tp_profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_profile_languageskill)).BeginInit();
@@ -188,6 +193,11 @@
             // tp_profile
             // 
             this.tp_profile.AutoScroll = true;
+            this.tp_profile.Controls.Add(this.tb_profile_noarmyreason);
+            this.tp_profile.Controls.Add(this.lb_profile_noarmyreason);
+            this.tp_profile.Controls.Add(this.tb_profile_armyitem);
+            this.tp_profile.Controls.Add(this.lb_profile_armyitem);
+            this.tp_profile.Controls.Add(this.lb_profile_army);
             this.tp_profile.Controls.Add(this.btn_profile_birthday);
             this.tp_profile.Controls.Add(this.btn_profile_interviewdate);
             this.tp_profile.Controls.Add(this.tb_profile_birthday);
@@ -301,6 +311,16 @@
             this.tp_profile.Text = "人資資料";
             this.tp_profile.UseVisualStyleBackColor = true;
             // 
+            // lb_profile_army
+            // 
+            this.lb_profile_army.AutoSize = true;
+            this.lb_profile_army.Font = new System.Drawing.Font("新細明體", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lb_profile_army.Location = new System.Drawing.Point(57, 496);
+            this.lb_profile_army.Name = "lb_profile_army";
+            this.lb_profile_army.Size = new System.Drawing.Size(91, 37);
+            this.lb_profile_army.TabIndex = 142;
+            this.lb_profile_army.Text = "兵役";
+            // 
             // btn_profile_birthday
             // 
             this.btn_profile_birthday.Image = global::hrtest.Properties.Resources.calander;
@@ -365,7 +385,7 @@
             // 
             // tb_profile_Trait
             // 
-            this.tb_profile_Trait.Location = new System.Drawing.Point(212, 1187);
+            this.tb_profile_Trait.Location = new System.Drawing.Point(212, 1257);
             this.tb_profile_Trait.Name = "tb_profile_Trait";
             this.tb_profile_Trait.Size = new System.Drawing.Size(923, 22);
             this.tb_profile_Trait.TabIndex = 133;
@@ -373,7 +393,7 @@
             // lb_profile_Trait
             // 
             this.lb_profile_Trait.AutoSize = true;
-            this.lb_profile_Trait.Location = new System.Drawing.Point(210, 1172);
+            this.lb_profile_Trait.Location = new System.Drawing.Point(210, 1242);
             this.lb_profile_Trait.Name = "lb_profile_Trait";
             this.lb_profile_Trait.Size = new System.Drawing.Size(545, 12);
             this.lb_profile_Trait.TabIndex = 132;
@@ -381,7 +401,7 @@
             // 
             // tb_profile_ispromise
             // 
-            this.tb_profile_ispromise.Location = new System.Drawing.Point(212, 1135);
+            this.tb_profile_ispromise.Location = new System.Drawing.Point(212, 1205);
             this.tb_profile_ispromise.Name = "tb_profile_ispromise";
             this.tb_profile_ispromise.Size = new System.Drawing.Size(923, 22);
             this.tb_profile_ispromise.TabIndex = 131;
@@ -389,7 +409,7 @@
             // lb_profile_ispromise
             // 
             this.lb_profile_ispromise.AutoSize = true;
-            this.lb_profile_ispromise.Location = new System.Drawing.Point(210, 1120);
+            this.lb_profile_ispromise.Location = new System.Drawing.Point(210, 1190);
             this.lb_profile_ispromise.Name = "lb_profile_ispromise";
             this.lb_profile_ispromise.Size = new System.Drawing.Size(217, 12);
             this.lb_profile_ispromise.TabIndex = 130;
@@ -397,7 +417,7 @@
             // 
             // tb_profile_wishmanager
             // 
-            this.tb_profile_wishmanager.Location = new System.Drawing.Point(212, 1083);
+            this.tb_profile_wishmanager.Location = new System.Drawing.Point(212, 1153);
             this.tb_profile_wishmanager.Name = "tb_profile_wishmanager";
             this.tb_profile_wishmanager.Size = new System.Drawing.Size(923, 22);
             this.tb_profile_wishmanager.TabIndex = 129;
@@ -405,7 +425,7 @@
             // lb_profile_wishmanager
             // 
             this.lb_profile_wishmanager.AutoSize = true;
-            this.lb_profile_wishmanager.Location = new System.Drawing.Point(210, 1068);
+            this.lb_profile_wishmanager.Location = new System.Drawing.Point(210, 1138);
             this.lb_profile_wishmanager.Name = "lb_profile_wishmanager";
             this.lb_profile_wishmanager.Size = new System.Drawing.Size(185, 12);
             this.lb_profile_wishmanager.TabIndex = 128;
@@ -413,7 +433,7 @@
             // 
             // tb_profile_future
             // 
-            this.tb_profile_future.Location = new System.Drawing.Point(212, 1033);
+            this.tb_profile_future.Location = new System.Drawing.Point(212, 1103);
             this.tb_profile_future.Name = "tb_profile_future";
             this.tb_profile_future.Size = new System.Drawing.Size(923, 22);
             this.tb_profile_future.TabIndex = 127;
@@ -421,7 +441,7 @@
             // lb_profile_future
             // 
             this.lb_profile_future.AutoSize = true;
-            this.lb_profile_future.Location = new System.Drawing.Point(210, 1018);
+            this.lb_profile_future.Location = new System.Drawing.Point(210, 1088);
             this.lb_profile_future.Name = "lb_profile_future";
             this.lb_profile_future.Size = new System.Drawing.Size(173, 12);
             this.lb_profile_future.TabIndex = 126;
@@ -429,7 +449,7 @@
             // 
             // tb_profile_reasonforisland
             // 
-            this.tb_profile_reasonforisland.Location = new System.Drawing.Point(212, 984);
+            this.tb_profile_reasonforisland.Location = new System.Drawing.Point(212, 1054);
             this.tb_profile_reasonforisland.Name = "tb_profile_reasonforisland";
             this.tb_profile_reasonforisland.Size = new System.Drawing.Size(923, 22);
             this.tb_profile_reasonforisland.TabIndex = 125;
@@ -437,7 +457,7 @@
             // lb_profile_reasonforisland
             // 
             this.lb_profile_reasonforisland.AutoSize = true;
-            this.lb_profile_reasonforisland.Location = new System.Drawing.Point(210, 969);
+            this.lb_profile_reasonforisland.Location = new System.Drawing.Point(210, 1039);
             this.lb_profile_reasonforisland.Name = "lb_profile_reasonforisland";
             this.lb_profile_reasonforisland.Size = new System.Drawing.Size(341, 12);
             this.lb_profile_reasonforisland.TabIndex = 124;
@@ -445,7 +465,7 @@
             // 
             // tb_profile_habbit
             // 
-            this.tb_profile_habbit.Location = new System.Drawing.Point(270, 935);
+            this.tb_profile_habbit.Location = new System.Drawing.Point(270, 1005);
             this.tb_profile_habbit.Name = "tb_profile_habbit";
             this.tb_profile_habbit.Size = new System.Drawing.Size(263, 22);
             this.tb_profile_habbit.TabIndex = 123;
@@ -453,7 +473,7 @@
             // lb_profile_habbit
             // 
             this.lb_profile_habbit.AutoSize = true;
-            this.lb_profile_habbit.Location = new System.Drawing.Point(217, 943);
+            this.lb_profile_habbit.Location = new System.Drawing.Point(217, 1013);
             this.lb_profile_habbit.Name = "lb_profile_habbit";
             this.lb_profile_habbit.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_habbit.TabIndex = 122;
@@ -461,7 +481,7 @@
             // 
             // tb_profile_disadvantage
             // 
-            this.tb_profile_disadvantage.Location = new System.Drawing.Point(632, 902);
+            this.tb_profile_disadvantage.Location = new System.Drawing.Point(632, 972);
             this.tb_profile_disadvantage.Name = "tb_profile_disadvantage";
             this.tb_profile_disadvantage.Size = new System.Drawing.Size(484, 22);
             this.tb_profile_disadvantage.TabIndex = 121;
@@ -469,7 +489,7 @@
             // lb_profile_disadvantage
             // 
             this.lb_profile_disadvantage.AutoSize = true;
-            this.lb_profile_disadvantage.Location = new System.Drawing.Point(579, 910);
+            this.lb_profile_disadvantage.Location = new System.Drawing.Point(579, 980);
             this.lb_profile_disadvantage.Name = "lb_profile_disadvantage";
             this.lb_profile_disadvantage.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_disadvantage.TabIndex = 120;
@@ -477,7 +497,7 @@
             // 
             // tb_profile_advantage
             // 
-            this.tb_profile_advantage.Location = new System.Drawing.Point(270, 907);
+            this.tb_profile_advantage.Location = new System.Drawing.Point(270, 977);
             this.tb_profile_advantage.Name = "tb_profile_advantage";
             this.tb_profile_advantage.Size = new System.Drawing.Size(263, 22);
             this.tb_profile_advantage.TabIndex = 119;
@@ -485,7 +505,7 @@
             // lb_profile_advantage
             // 
             this.lb_profile_advantage.AutoSize = true;
-            this.lb_profile_advantage.Location = new System.Drawing.Point(217, 915);
+            this.lb_profile_advantage.Location = new System.Drawing.Point(217, 985);
             this.lb_profile_advantage.Name = "lb_profile_advantage";
             this.lb_profile_advantage.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_advantage.TabIndex = 118;
@@ -493,7 +513,7 @@
             // 
             // tb_profile_register
             // 
-            this.tb_profile_register.Location = new System.Drawing.Point(997, 875);
+            this.tb_profile_register.Location = new System.Drawing.Point(997, 945);
             this.tb_profile_register.Name = "tb_profile_register";
             this.tb_profile_register.Size = new System.Drawing.Size(119, 22);
             this.tb_profile_register.TabIndex = 117;
@@ -501,7 +521,7 @@
             // lb_profile_register
             // 
             this.lb_profile_register.AutoSize = true;
-            this.lb_profile_register.Location = new System.Drawing.Point(853, 887);
+            this.lb_profile_register.Location = new System.Drawing.Point(853, 957);
             this.lb_profile_register.Name = "lb_profile_register";
             this.lb_profile_register.Size = new System.Drawing.Size(113, 12);
             this.lb_profile_register.TabIndex = 116;
@@ -509,7 +529,7 @@
             // 
             // tb_profile_wishslalry
             // 
-            this.tb_profile_wishslalry.Location = new System.Drawing.Point(641, 877);
+            this.tb_profile_wishslalry.Location = new System.Drawing.Point(641, 947);
             this.tb_profile_wishslalry.Name = "tb_profile_wishslalry";
             this.tb_profile_wishslalry.Size = new System.Drawing.Size(145, 22);
             this.tb_profile_wishslalry.TabIndex = 115;
@@ -517,7 +537,7 @@
             // lb_profile_wishslalry
             // 
             this.lb_profile_wishslalry.AutoSize = true;
-            this.lb_profile_wishslalry.Location = new System.Drawing.Point(579, 885);
+            this.lb_profile_wishslalry.Location = new System.Drawing.Point(579, 955);
             this.lb_profile_wishslalry.Name = "lb_profile_wishslalry";
             this.lb_profile_wishslalry.Size = new System.Drawing.Size(53, 12);
             this.lb_profile_wishslalry.TabIndex = 114;
@@ -525,7 +545,7 @@
             // 
             // tb_profile_careinwork
             // 
-            this.tb_profile_careinwork.Location = new System.Drawing.Point(357, 879);
+            this.tb_profile_careinwork.Location = new System.Drawing.Point(357, 949);
             this.tb_profile_careinwork.Name = "tb_profile_careinwork";
             this.tb_profile_careinwork.Size = new System.Drawing.Size(176, 22);
             this.tb_profile_careinwork.TabIndex = 113;
@@ -533,7 +553,7 @@
             // lb_profile_careinwork
             // 
             this.lb_profile_careinwork.AutoSize = true;
-            this.lb_profile_careinwork.Location = new System.Drawing.Point(214, 887);
+            this.lb_profile_careinwork.Location = new System.Drawing.Point(214, 957);
             this.lb_profile_careinwork.Name = "lb_profile_careinwork";
             this.lb_profile_careinwork.Size = new System.Drawing.Size(137, 12);
             this.lb_profile_careinwork.TabIndex = 112;
@@ -541,7 +561,7 @@
             // 
             // tb_profile_friendname
             // 
-            this.tb_profile_friendname.Location = new System.Drawing.Point(975, 846);
+            this.tb_profile_friendname.Location = new System.Drawing.Point(975, 916);
             this.tb_profile_friendname.Name = "tb_profile_friendname";
             this.tb_profile_friendname.Size = new System.Drawing.Size(141, 22);
             this.tb_profile_friendname.TabIndex = 111;
@@ -549,7 +569,7 @@
             // lb_profile_friendname
             // 
             this.lb_profile_friendname.AutoSize = true;
-            this.lb_profile_friendname.Location = new System.Drawing.Point(853, 859);
+            this.lb_profile_friendname.Location = new System.Drawing.Point(853, 929);
             this.lb_profile_friendname.Name = "lb_profile_friendname";
             this.lb_profile_friendname.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_friendname.TabIndex = 110;
@@ -557,7 +577,7 @@
             // 
             // tb_profile_relationship
             // 
-            this.tb_profile_relationship.Location = new System.Drawing.Point(641, 849);
+            this.tb_profile_relationship.Location = new System.Drawing.Point(641, 919);
             this.tb_profile_relationship.Name = "tb_profile_relationship";
             this.tb_profile_relationship.Size = new System.Drawing.Size(145, 22);
             this.tb_profile_relationship.TabIndex = 109;
@@ -565,7 +585,7 @@
             // lb_profile_relationship
             // 
             this.lb_profile_relationship.AutoSize = true;
-            this.lb_profile_relationship.Location = new System.Drawing.Point(578, 859);
+            this.lb_profile_relationship.Location = new System.Drawing.Point(578, 929);
             this.lb_profile_relationship.Name = "lb_profile_relationship";
             this.lb_profile_relationship.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_relationship.TabIndex = 108;
@@ -573,7 +593,7 @@
             // 
             // tb_profile_friendincompany
             // 
-            this.tb_profile_friendincompany.Location = new System.Drawing.Point(357, 851);
+            this.tb_profile_friendincompany.Location = new System.Drawing.Point(357, 921);
             this.tb_profile_friendincompany.Name = "tb_profile_friendincompany";
             this.tb_profile_friendincompany.Size = new System.Drawing.Size(176, 22);
             this.tb_profile_friendincompany.TabIndex = 107;
@@ -581,7 +601,7 @@
             // lb_profile_friendincompany
             // 
             this.lb_profile_friendincompany.AutoSize = true;
-            this.lb_profile_friendincompany.Location = new System.Drawing.Point(214, 859);
+            this.lb_profile_friendincompany.Location = new System.Drawing.Point(214, 929);
             this.lb_profile_friendincompany.Name = "lb_profile_friendincompany";
             this.lb_profile_friendincompany.Size = new System.Drawing.Size(137, 12);
             this.lb_profile_friendincompany.TabIndex = 106;
@@ -589,7 +609,7 @@
             // 
             // tb_profile_stillstudy
             // 
-            this.tb_profile_stillstudy.Location = new System.Drawing.Point(212, 818);
+            this.tb_profile_stillstudy.Location = new System.Drawing.Point(212, 888);
             this.tb_profile_stillstudy.Name = "tb_profile_stillstudy";
             this.tb_profile_stillstudy.Size = new System.Drawing.Size(923, 22);
             this.tb_profile_stillstudy.TabIndex = 105;
@@ -597,7 +617,7 @@
             // lb_profile_stillstudy
             // 
             this.lb_profile_stillstudy.AutoSize = true;
-            this.lb_profile_stillstudy.Location = new System.Drawing.Point(210, 803);
+            this.lb_profile_stillstudy.Location = new System.Drawing.Point(210, 873);
             this.lb_profile_stillstudy.Name = "lb_profile_stillstudy";
             this.lb_profile_stillstudy.Size = new System.Drawing.Size(257, 12);
             this.lb_profile_stillstudy.TabIndex = 104;
@@ -605,7 +625,7 @@
             // 
             // tb_profile_framwork
             // 
-            this.tb_profile_framwork.Location = new System.Drawing.Point(590, 532);
+            this.tb_profile_framwork.Location = new System.Drawing.Point(583, 600);
             this.tb_profile_framwork.Name = "tb_profile_framwork";
             this.tb_profile_framwork.Size = new System.Drawing.Size(151, 22);
             this.tb_profile_framwork.TabIndex = 103;
@@ -613,7 +633,7 @@
             // lb_profile_framwork
             // 
             this.lb_profile_framwork.AutoSize = true;
-            this.lb_profile_framwork.Location = new System.Drawing.Point(531, 540);
+            this.lb_profile_framwork.Location = new System.Drawing.Point(524, 608);
             this.lb_profile_framwork.Name = "lb_profile_framwork";
             this.lb_profile_framwork.Size = new System.Drawing.Size(53, 12);
             this.lb_profile_framwork.TabIndex = 102;
@@ -621,7 +641,7 @@
             // 
             // tb_profile_cert_others
             // 
-            this.tb_profile_cert_others.Location = new System.Drawing.Point(656, 652);
+            this.tb_profile_cert_others.Location = new System.Drawing.Point(649, 720);
             this.tb_profile_cert_others.Name = "tb_profile_cert_others";
             this.tb_profile_cert_others.Size = new System.Drawing.Size(472, 22);
             this.tb_profile_cert_others.TabIndex = 101;
@@ -629,7 +649,7 @@
             // lb_profile_cert_others
             // 
             this.lb_profile_cert_others.AutoSize = true;
-            this.lb_profile_cert_others.Location = new System.Drawing.Point(621, 662);
+            this.lb_profile_cert_others.Location = new System.Drawing.Point(614, 730);
             this.lb_profile_cert_others.Name = "lb_profile_cert_others";
             this.lb_profile_cert_others.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_cert_others.TabIndex = 100;
@@ -637,7 +657,7 @@
             // 
             // tb_profile_database_others
             // 
-            this.tb_profile_database_others.Location = new System.Drawing.Point(566, 627);
+            this.tb_profile_database_others.Location = new System.Drawing.Point(559, 695);
             this.tb_profile_database_others.Name = "tb_profile_database_others";
             this.tb_profile_database_others.Size = new System.Drawing.Size(562, 22);
             this.tb_profile_database_others.TabIndex = 99;
@@ -645,7 +665,7 @@
             // lb_profile_database_others
             // 
             this.lb_profile_database_others.AutoSize = true;
-            this.lb_profile_database_others.Location = new System.Drawing.Point(531, 637);
+            this.lb_profile_database_others.Location = new System.Drawing.Point(524, 705);
             this.lb_profile_database_others.Name = "lb_profile_database_others";
             this.lb_profile_database_others.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_database_others.TabIndex = 98;
@@ -653,7 +673,7 @@
             // 
             // tb_profile_bigdata_others
             // 
-            this.tb_profile_bigdata_others.Location = new System.Drawing.Point(513, 604);
+            this.tb_profile_bigdata_others.Location = new System.Drawing.Point(506, 672);
             this.tb_profile_bigdata_others.Name = "tb_profile_bigdata_others";
             this.tb_profile_bigdata_others.Size = new System.Drawing.Size(615, 22);
             this.tb_profile_bigdata_others.TabIndex = 97;
@@ -661,7 +681,7 @@
             // lb_profile_bigdata_others
             // 
             this.lb_profile_bigdata_others.AutoSize = true;
-            this.lb_profile_bigdata_others.Location = new System.Drawing.Point(478, 613);
+            this.lb_profile_bigdata_others.Location = new System.Drawing.Point(471, 681);
             this.lb_profile_bigdata_others.Name = "lb_profile_bigdata_others";
             this.lb_profile_bigdata_others.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_bigdata_others.TabIndex = 96;
@@ -669,7 +689,7 @@
             // 
             // tb_profile_os_others
             // 
-            this.tb_profile_os_others.Location = new System.Drawing.Point(623, 579);
+            this.tb_profile_os_others.Location = new System.Drawing.Point(616, 647);
             this.tb_profile_os_others.Name = "tb_profile_os_others";
             this.tb_profile_os_others.Size = new System.Drawing.Size(505, 22);
             this.tb_profile_os_others.TabIndex = 95;
@@ -677,7 +697,7 @@
             // lb_profile_os_others
             // 
             this.lb_profile_os_others.AutoSize = true;
-            this.lb_profile_os_others.Location = new System.Drawing.Point(588, 589);
+            this.lb_profile_os_others.Location = new System.Drawing.Point(581, 657);
             this.lb_profile_os_others.Name = "lb_profile_os_others";
             this.lb_profile_os_others.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_os_others.TabIndex = 94;
@@ -685,7 +705,7 @@
             // 
             // tb_profile_devops_others
             // 
-            this.tb_profile_devops_others.Location = new System.Drawing.Point(623, 556);
+            this.tb_profile_devops_others.Location = new System.Drawing.Point(616, 624);
             this.tb_profile_devops_others.Name = "tb_profile_devops_others";
             this.tb_profile_devops_others.Size = new System.Drawing.Size(505, 22);
             this.tb_profile_devops_others.TabIndex = 93;
@@ -693,7 +713,7 @@
             // lb_profile_devops_others
             // 
             this.lb_profile_devops_others.AutoSize = true;
-            this.lb_profile_devops_others.Location = new System.Drawing.Point(588, 566);
+            this.lb_profile_devops_others.Location = new System.Drawing.Point(581, 634);
             this.lb_profile_devops_others.Name = "lb_profile_devops_others";
             this.lb_profile_devops_others.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_devops_others.TabIndex = 92;
@@ -701,7 +721,7 @@
             // 
             // tb_profile_developtool_others
             // 
-            this.tb_profile_developtool_others.Location = new System.Drawing.Point(797, 531);
+            this.tb_profile_developtool_others.Location = new System.Drawing.Point(790, 599);
             this.tb_profile_developtool_others.Name = "tb_profile_developtool_others";
             this.tb_profile_developtool_others.Size = new System.Drawing.Size(331, 22);
             this.tb_profile_developtool_others.TabIndex = 91;
@@ -709,7 +729,7 @@
             // lb_profile_developtool_others
             // 
             this.lb_profile_developtool_others.AutoSize = true;
-            this.lb_profile_developtool_others.Location = new System.Drawing.Point(757, 540);
+            this.lb_profile_developtool_others.Location = new System.Drawing.Point(750, 608);
             this.lb_profile_developtool_others.Name = "lb_profile_developtool_others";
             this.lb_profile_developtool_others.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_developtool_others.TabIndex = 90;
@@ -717,7 +737,7 @@
             // 
             // tb_profile_programlanguage
             // 
-            this.tb_profile_programlanguage.Location = new System.Drawing.Point(797, 505);
+            this.tb_profile_programlanguage.Location = new System.Drawing.Point(790, 573);
             this.tb_profile_programlanguage.Name = "tb_profile_programlanguage";
             this.tb_profile_programlanguage.Size = new System.Drawing.Size(331, 22);
             this.tb_profile_programlanguage.TabIndex = 89;
@@ -725,7 +745,7 @@
             // lb_profile_programlanguage_other
             // 
             this.lb_profile_programlanguage_other.AutoSize = true;
-            this.lb_profile_programlanguage_other.Location = new System.Drawing.Point(757, 514);
+            this.lb_profile_programlanguage_other.Location = new System.Drawing.Point(750, 582);
             this.lb_profile_programlanguage_other.Name = "lb_profile_programlanguage_other";
             this.lb_profile_programlanguage_other.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_programlanguage_other.TabIndex = 88;
@@ -743,7 +763,7 @@
             "Scala",
             "R",
             "Python"});
-            this.clb_profile_programlanguage.Location = new System.Drawing.Point(260, 505);
+            this.clb_profile_programlanguage.Location = new System.Drawing.Point(253, 573);
             this.clb_profile_programlanguage.MultiColumn = true;
             this.clb_profile_programlanguage.Name = "clb_profile_programlanguage";
             this.clb_profile_programlanguage.Size = new System.Drawing.Size(481, 21);
@@ -757,7 +777,7 @@
             "Visual Studio",
             "Eclipse",
             "Xcode"});
-            this.clb_profile_developetools.Location = new System.Drawing.Point(260, 531);
+            this.clb_profile_developetools.Location = new System.Drawing.Point(253, 599);
             this.clb_profile_developetools.MultiColumn = true;
             this.clb_profile_developetools.Name = "clb_profile_developetools";
             this.clb_profile_developetools.Size = new System.Drawing.Size(265, 21);
@@ -773,7 +793,7 @@
             "Vagrant",
             "Puppet",
             "TFS"});
-            this.clb_profile_devops.Location = new System.Drawing.Point(260, 558);
+            this.clb_profile_devops.Location = new System.Drawing.Point(253, 626);
             this.clb_profile_devops.MultiColumn = true;
             this.clb_profile_devops.Name = "clb_profile_devops";
             this.clb_profile_devops.Size = new System.Drawing.Size(320, 21);
@@ -789,7 +809,7 @@
             "Unix",
             "Android",
             "iOS"});
-            this.clb_profile_os.Location = new System.Drawing.Point(260, 580);
+            this.clb_profile_os.Location = new System.Drawing.Point(253, 648);
             this.clb_profile_os.MultiColumn = true;
             this.clb_profile_os.Name = "clb_profile_os";
             this.clb_profile_os.Size = new System.Drawing.Size(320, 21);
@@ -803,7 +823,7 @@
             "Hadoop",
             "Spark",
             "Cloudera"});
-            this.clb_profile_bigdata.Location = new System.Drawing.Point(260, 605);
+            this.clb_profile_bigdata.Location = new System.Drawing.Point(253, 673);
             this.clb_profile_bigdata.MultiColumn = true;
             this.clb_profile_bigdata.Name = "clb_profile_bigdata";
             this.clb_profile_bigdata.Size = new System.Drawing.Size(212, 21);
@@ -818,7 +838,7 @@
             "MySQL",
             "MS SQL",
             "Hbase"});
-            this.clb_profile_database.Location = new System.Drawing.Point(260, 628);
+            this.clb_profile_database.Location = new System.Drawing.Point(253, 696);
             this.clb_profile_database.MultiColumn = true;
             this.clb_profile_database.Name = "clb_profile_database";
             this.clb_profile_database.Size = new System.Drawing.Size(265, 21);
@@ -834,7 +854,7 @@
             "MCAD",
             "MCTS",
             "PMP"});
-            this.clb_profile_cert.Location = new System.Drawing.Point(260, 653);
+            this.clb_profile_cert.Location = new System.Drawing.Point(253, 721);
             this.clb_profile_cert.MultiColumn = true;
             this.clb_profile_cert.Name = "clb_profile_cert";
             this.clb_profile_cert.Size = new System.Drawing.Size(347, 21);
@@ -842,7 +862,7 @@
             // 
             // btn_profile_languageskill
             // 
-            this.btn_profile_languageskill.Location = new System.Drawing.Point(66, 744);
+            this.btn_profile_languageskill.Location = new System.Drawing.Point(59, 812);
             this.btn_profile_languageskill.Name = "btn_profile_languageskill";
             this.btn_profile_languageskill.Size = new System.Drawing.Size(75, 23);
             this.btn_profile_languageskill.TabIndex = 45;
@@ -853,7 +873,7 @@
             // 
             this.lb_profile_languageskill.AutoSize = true;
             this.lb_profile_languageskill.Font = new System.Drawing.Font("新細明體", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lb_profile_languageskill.Location = new System.Drawing.Point(34, 680);
+            this.lb_profile_languageskill.Location = new System.Drawing.Point(27, 748);
             this.lb_profile_languageskill.Name = "lb_profile_languageskill";
             this.lb_profile_languageskill.Size = new System.Drawing.Size(165, 37);
             this.lb_profile_languageskill.TabIndex = 44;
@@ -862,7 +882,7 @@
             // dgv_profile_languageskill
             // 
             this.dgv_profile_languageskill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_profile_languageskill.Location = new System.Drawing.Point(212, 680);
+            this.dgv_profile_languageskill.Location = new System.Drawing.Point(205, 748);
             this.dgv_profile_languageskill.Name = "dgv_profile_languageskill";
             this.dgv_profile_languageskill.RowTemplate.Height = 24;
             this.dgv_profile_languageskill.Size = new System.Drawing.Size(923, 109);
@@ -871,7 +891,7 @@
             // lb_profile_cert
             // 
             this.lb_profile_cert.AutoSize = true;
-            this.lb_profile_cert.Location = new System.Drawing.Point(201, 654);
+            this.lb_profile_cert.Location = new System.Drawing.Point(194, 722);
             this.lb_profile_cert.Name = "lb_profile_cert";
             this.lb_profile_cert.Size = new System.Drawing.Size(53, 12);
             this.lb_profile_cert.TabIndex = 42;
@@ -880,7 +900,7 @@
             // lb_profile_database
             // 
             this.lb_profile_database.AutoSize = true;
-            this.lb_profile_database.Location = new System.Drawing.Point(201, 632);
+            this.lb_profile_database.Location = new System.Drawing.Point(194, 700);
             this.lb_profile_database.Name = "lb_profile_database";
             this.lb_profile_database.Size = new System.Drawing.Size(41, 12);
             this.lb_profile_database.TabIndex = 41;
@@ -889,7 +909,7 @@
             // lb_profile_bigdata
             // 
             this.lb_profile_bigdata.AutoSize = true;
-            this.lb_profile_bigdata.Location = new System.Drawing.Point(201, 609);
+            this.lb_profile_bigdata.Location = new System.Drawing.Point(194, 677);
             this.lb_profile_bigdata.Name = "lb_profile_bigdata";
             this.lb_profile_bigdata.Size = new System.Drawing.Size(41, 12);
             this.lb_profile_bigdata.TabIndex = 40;
@@ -898,7 +918,7 @@
             // lb_profile_os
             // 
             this.lb_profile_os.AutoSize = true;
-            this.lb_profile_os.Location = new System.Drawing.Point(201, 584);
+            this.lb_profile_os.Location = new System.Drawing.Point(194, 652);
             this.lb_profile_os.Name = "lb_profile_os";
             this.lb_profile_os.Size = new System.Drawing.Size(53, 12);
             this.lb_profile_os.TabIndex = 39;
@@ -907,7 +927,7 @@
             // lb_profile_devopslb
             // 
             this.lb_profile_devopslb.AutoSize = true;
-            this.lb_profile_devopslb.Location = new System.Drawing.Point(201, 562);
+            this.lb_profile_devopslb.Location = new System.Drawing.Point(194, 630);
             this.lb_profile_devopslb.Name = "lb_profile_devopslb";
             this.lb_profile_devopslb.Size = new System.Drawing.Size(40, 12);
             this.lb_profile_devopslb.TabIndex = 38;
@@ -916,7 +936,7 @@
             // lb_profile_developetoolslb
             // 
             this.lb_profile_developetoolslb.AutoSize = true;
-            this.lb_profile_developetoolslb.Location = new System.Drawing.Point(201, 539);
+            this.lb_profile_developetoolslb.Location = new System.Drawing.Point(194, 607);
             this.lb_profile_developetoolslb.Name = "lb_profile_developetoolslb";
             this.lb_profile_developetoolslb.Size = new System.Drawing.Size(53, 12);
             this.lb_profile_developetoolslb.TabIndex = 37;
@@ -925,7 +945,7 @@
             // lb_profile_programlanguagelb
             // 
             this.lb_profile_programlanguagelb.AutoSize = true;
-            this.lb_profile_programlanguagelb.Location = new System.Drawing.Point(201, 514);
+            this.lb_profile_programlanguagelb.Location = new System.Drawing.Point(194, 582);
             this.lb_profile_programlanguagelb.Name = "lb_profile_programlanguagelb";
             this.lb_profile_programlanguagelb.Size = new System.Drawing.Size(53, 12);
             this.lb_profile_programlanguagelb.TabIndex = 36;
@@ -935,7 +955,7 @@
             // 
             this.lb_profile_skill.AutoSize = true;
             this.lb_profile_skill.Font = new System.Drawing.Font("新細明體", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lb_profile_skill.Location = new System.Drawing.Point(64, 514);
+            this.lb_profile_skill.Location = new System.Drawing.Point(57, 582);
             this.lb_profile_skill.Name = "lb_profile_skill";
             this.lb_profile_skill.Size = new System.Drawing.Size(91, 37);
             this.lb_profile_skill.TabIndex = 35;
@@ -944,7 +964,7 @@
             // lb_profile_skilltitle
             // 
             this.lb_profile_skilltitle.AutoSize = true;
-            this.lb_profile_skilltitle.Location = new System.Drawing.Point(210, 486);
+            this.lb_profile_skilltitle.Location = new System.Drawing.Point(203, 554);
             this.lb_profile_skilltitle.Name = "lb_profile_skilltitle";
             this.lb_profile_skilltitle.Size = new System.Drawing.Size(281, 12);
             this.lb_profile_skilltitle.TabIndex = 34;
@@ -1421,7 +1441,7 @@
             // gb_interviewcommand
             // 
             this.gb_interviewcommand.Controls.Add(this.gw_result_interview);
-            this.gb_interviewcommand.Location = new System.Drawing.Point(18, 146);
+            this.gb_interviewcommand.Location = new System.Drawing.Point(18, 188);
             this.gb_interviewcommand.Name = "gb_interviewcommand";
             this.gb_interviewcommand.Size = new System.Drawing.Size(829, 159);
             this.gb_interviewcommand.TabIndex = 8;
@@ -1484,12 +1504,44 @@
             // 
             // btn_result_commandcreate
             // 
-            this.btn_result_commandcreate.Location = new System.Drawing.Point(24, 311);
+            this.btn_result_commandcreate.Location = new System.Drawing.Point(18, 159);
             this.btn_result_commandcreate.Name = "btn_result_commandcreate";
             this.btn_result_commandcreate.Size = new System.Drawing.Size(86, 23);
             this.btn_result_commandcreate.TabIndex = 6;
             this.btn_result_commandcreate.Text = "新增面談評語";
             this.btn_result_commandcreate.UseVisualStyleBackColor = true;
+            // 
+            // tb_profile_armyitem
+            // 
+            this.tb_profile_armyitem.Location = new System.Drawing.Point(251, 510);
+            this.tb_profile_armyitem.Name = "tb_profile_armyitem";
+            this.tb_profile_armyitem.Size = new System.Drawing.Size(100, 22);
+            this.tb_profile_armyitem.TabIndex = 144;
+            // 
+            // lb_profile_armyitem
+            // 
+            this.lb_profile_armyitem.AutoSize = true;
+            this.lb_profile_armyitem.Location = new System.Drawing.Point(194, 520);
+            this.lb_profile_armyitem.Name = "lb_profile_armyitem";
+            this.lb_profile_armyitem.Size = new System.Drawing.Size(53, 12);
+            this.lb_profile_armyitem.TabIndex = 143;
+            this.lb_profile_armyitem.Text = "服役期間";
+            // 
+            // lb_profile_noarmyreason
+            // 
+            this.lb_profile_noarmyreason.AutoSize = true;
+            this.lb_profile_noarmyreason.Location = new System.Drawing.Point(374, 516);
+            this.lb_profile_noarmyreason.Name = "lb_profile_noarmyreason";
+            this.lb_profile_noarmyreason.Size = new System.Drawing.Size(53, 12);
+            this.lb_profile_noarmyreason.TabIndex = 145;
+            this.lb_profile_noarmyreason.Text = "免役說明";
+            // 
+            // tb_profile_noarmyreason
+            // 
+            this.tb_profile_noarmyreason.Location = new System.Drawing.Point(442, 510);
+            this.tb_profile_noarmyreason.Name = "tb_profile_noarmyreason";
+            this.tb_profile_noarmyreason.Size = new System.Drawing.Size(679, 22);
+            this.tb_profile_noarmyreason.TabIndex = 146;
             // 
             // UC_data_interview
             // 
@@ -1649,5 +1701,10 @@
         private System.Windows.Forms.TextBox tb_profile_birthday;
         private System.Windows.Forms.TextBox tb_profile_interviewdate;
         private System.Windows.Forms.TableLayoutPanel tlp_project_list;
+        private System.Windows.Forms.Label lb_profile_army;
+        private System.Windows.Forms.TextBox tb_profile_noarmyreason;
+        private System.Windows.Forms.Label lb_profile_noarmyreason;
+        private System.Windows.Forms.TextBox tb_profile_armyitem;
+        private System.Windows.Forms.Label lb_profile_armyitem;
     }
 }

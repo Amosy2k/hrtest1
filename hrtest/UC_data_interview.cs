@@ -52,7 +52,9 @@ namespace hrtest
                 tlp_project_list.RowCount = tlp_project_list.RowCount + 1;
             }
             UC_data_project uC_Data_Project = new UC_data_project();
-            tlp_project_list.Controls.Add(uC_Data_Project, 1, tlp_project_list.RowCount - 1);
+            tlp_project_list.Controls.Add(uC_Data_Project, 1, 0);
+
+            //tlp_project_list.Controls.Add(uC_Data_Project, 1, tlp_project_list.RowCount - 1);
 
             uC_Data_Project.deleteclick += UC_Data_Project_deleteclick;
         }
