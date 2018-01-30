@@ -86,16 +86,17 @@
     <Compile Include="grant\frm_grant_changepassword.Designer.cs">
       <DependentUpon>frm_grant_changepassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_login.cs">
+    <Compile Include="TestMain.cs" />
+    <Compile Include="Main\frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_login.Designer.cs">
+    <Compile Include="Main\frm_login.Designer.cs">
       <DependentUpon>frm_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_main.cs">
+    <Compile Include="Main\frm_main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_main.Designer.cs">
+    <Compile Include="Main\frm_main.Designer.cs">
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
     <Compile Include="grant\frm_grant_sa.cs">
@@ -112,16 +113,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UC_data_interview.cs">
+    <Compile Include="usercontroller\UC_data_interview.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_data_interview.Designer.cs">
+    <Compile Include="usercontroller\UC_data_interview.Designer.cs">
       <DependentUpon>UC_data_interview.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_data_project.cs">
+    <Compile Include="usercontroller\UC_data_project.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_data_project.Designer.cs">
+    <Compile Include="usercontroller\UC_data_project.Designer.cs">
       <DependentUpon>UC_data_project.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="data\frm_data_calander.resx">
@@ -136,16 +137,16 @@
     <EmbeddedResource Include="data\frm_data_search.resx">
       <DependentUpon>frm_data_search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_login.resx">
+    <EmbeddedResource Include="Main\frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_main.en-US.resx">
+    <EmbeddedResource Include="Main\frm_main.en-US.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_main.resx">
+    <EmbeddedResource Include="Main\frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_main.zh-TW.resx">
+    <EmbeddedResource Include="Main\frm_main.zh-TW.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="grant\frm_grant_adduser.resx">
@@ -170,10 +171,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UC_data_interview.resx">
+    <EmbeddedResource Include="usercontroller\UC_data_interview.resx">
       <DependentUpon>UC_data_interview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_data_project.resx">
+    <EmbeddedResource Include="usercontroller\UC_data_project.resx">
       <DependentUpon>UC_data_project.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
