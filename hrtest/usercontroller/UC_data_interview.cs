@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
 
 
 namespace hrtest
@@ -14,6 +16,7 @@ namespace hrtest
     public partial class UC_data_interview : UserControl
     {
         public event EventHandler deleteclick;
+        string cs = ConfigurationManager.ConnectionStrings["User"].ConnectionString;
 
         protected void ondeleteclick(EventArgs e)
         {
@@ -89,6 +92,11 @@ namespace hrtest
             {
                 pb_profile_profileimg.ImageLocation = ofd.FileName;
             }
+        }
+
+        private void btn_profile_OK_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

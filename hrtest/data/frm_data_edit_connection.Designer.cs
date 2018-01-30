@@ -34,6 +34,7 @@
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_accept = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_create = new System.Windows.Forms.Button();
             this.cb_status = new System.Windows.Forms.ComboBox();
             this.lb_status = new System.Windows.Forms.Label();
@@ -54,9 +55,8 @@
             this.lb_lastpdatetimetm = new System.Windows.Forms.Label();
             this.lb_lastupdatetimelb = new System.Windows.Forms.Label();
             this.tp_interviewdata = new System.Windows.Forms.TabPage();
-            this.tp_add = new System.Windows.Forms.TabPage();
             this.uC_data_interview1 = new hrtest.UC_data_interview();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tp_add = new System.Windows.Forms.TabPage();
             this.tc_connection.SuspendLayout();
             this.tp_contact.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -136,6 +136,7 @@
             this.btn_accept.TabIndex = 20;
             this.btn_accept.Text = "確認";
             this.btn_accept.UseVisualStyleBackColor = true;
+            this.btn_accept.Click += new System.EventHandler(this.btn_accept_Click);
             // 
             // dataGridView1
             // 
@@ -151,6 +152,13 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(851, 207);
             this.dataGridView1.TabIndex = 19;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.UseColumnTextForButtonValue = true;
             // 
             // btn_create
             // 
@@ -332,16 +340,6 @@
             this.tp_interviewdata.Text = "面談資料";
             this.tp_interviewdata.UseVisualStyleBackColor = true;
             // 
-            // tp_add
-            // 
-            this.tp_add.Location = new System.Drawing.Point(4, 22);
-            this.tp_add.Name = "tp_add";
-            this.tp_add.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_add.Size = new System.Drawing.Size(1150, 839);
-            this.tp_add.TabIndex = 2;
-            this.tp_add.Text = "+";
-            this.tp_add.UseVisualStyleBackColor = true;
-            // 
             // uC_data_interview1
             // 
             this.uC_data_interview1.AutoScroll = true;
@@ -351,12 +349,15 @@
             this.uC_data_interview1.Size = new System.Drawing.Size(1144, 833);
             this.uC_data_interview1.TabIndex = 0;
             // 
-            // Delete
+            // tp_add
             // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.UseColumnTextForButtonValue = true;
+            this.tp_add.Location = new System.Drawing.Point(4, 22);
+            this.tp_add.Name = "tp_add";
+            this.tp_add.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_add.Size = new System.Drawing.Size(1150, 839);
+            this.tp_add.TabIndex = 2;
+            this.tp_add.Text = "+";
+            this.tp_add.UseVisualStyleBackColor = true;
             // 
             // frm_data_edit_connection
             // 

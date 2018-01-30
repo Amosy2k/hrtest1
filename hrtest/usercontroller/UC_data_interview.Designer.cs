@@ -30,6 +30,10 @@
         {
             this.tc_interview = new System.Windows.Forms.TabControl();
             this.tp_profile = new System.Windows.Forms.TabPage();
+            this.tb_profile_noarmyreason = new System.Windows.Forms.TextBox();
+            this.lb_profile_noarmyreason = new System.Windows.Forms.Label();
+            this.tb_profile_armyitem = new System.Windows.Forms.TextBox();
+            this.lb_profile_armyitem = new System.Windows.Forms.Label();
             this.lb_profile_army = new System.Windows.Forms.Label();
             this.btn_profile_birthday = new System.Windows.Forms.Button();
             this.btn_profile_interviewdate = new System.Windows.Forms.Button();
@@ -160,10 +164,6 @@
             this.rb_result_no = new System.Windows.Forms.RadioButton();
             this.rb_result_yes = new System.Windows.Forms.RadioButton();
             this.btn_result_commandcreate = new System.Windows.Forms.Button();
-            this.tb_profile_armyitem = new System.Windows.Forms.TextBox();
-            this.lb_profile_armyitem = new System.Windows.Forms.Label();
-            this.lb_profile_noarmyreason = new System.Windows.Forms.Label();
-            this.tb_profile_noarmyreason = new System.Windows.Forms.TextBox();
             this.tc_interview.SuspendLayout();
             this.tp_profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_profile_languageskill)).BeginInit();
@@ -311,6 +311,38 @@
             this.tp_profile.Text = "人資資料";
             this.tp_profile.UseVisualStyleBackColor = true;
             // 
+            // tb_profile_noarmyreason
+            // 
+            this.tb_profile_noarmyreason.Location = new System.Drawing.Point(442, 510);
+            this.tb_profile_noarmyreason.Name = "tb_profile_noarmyreason";
+            this.tb_profile_noarmyreason.Size = new System.Drawing.Size(679, 22);
+            this.tb_profile_noarmyreason.TabIndex = 146;
+            // 
+            // lb_profile_noarmyreason
+            // 
+            this.lb_profile_noarmyreason.AutoSize = true;
+            this.lb_profile_noarmyreason.Location = new System.Drawing.Point(374, 516);
+            this.lb_profile_noarmyreason.Name = "lb_profile_noarmyreason";
+            this.lb_profile_noarmyreason.Size = new System.Drawing.Size(53, 12);
+            this.lb_profile_noarmyreason.TabIndex = 145;
+            this.lb_profile_noarmyreason.Text = "免役說明";
+            // 
+            // tb_profile_armyitem
+            // 
+            this.tb_profile_armyitem.Location = new System.Drawing.Point(251, 510);
+            this.tb_profile_armyitem.Name = "tb_profile_armyitem";
+            this.tb_profile_armyitem.Size = new System.Drawing.Size(100, 22);
+            this.tb_profile_armyitem.TabIndex = 144;
+            // 
+            // lb_profile_armyitem
+            // 
+            this.lb_profile_armyitem.AutoSize = true;
+            this.lb_profile_armyitem.Location = new System.Drawing.Point(194, 520);
+            this.lb_profile_armyitem.Name = "lb_profile_armyitem";
+            this.lb_profile_armyitem.Size = new System.Drawing.Size(53, 12);
+            this.lb_profile_armyitem.TabIndex = 143;
+            this.lb_profile_armyitem.Text = "服役期間";
+            // 
             // lb_profile_army
             // 
             this.lb_profile_army.AutoSize = true;
@@ -382,6 +414,7 @@
             this.btn_profile_OK.TabIndex = 134;
             this.btn_profile_OK.Text = "確認";
             this.btn_profile_OK.UseVisualStyleBackColor = true;
+            this.btn_profile_OK.Click += new System.EventHandler(this.btn_profile_OK_Click);
             // 
             // tb_profile_Trait
             // 
@@ -1510,38 +1543,6 @@
             this.btn_result_commandcreate.TabIndex = 6;
             this.btn_result_commandcreate.Text = "新增面談評語";
             this.btn_result_commandcreate.UseVisualStyleBackColor = true;
-            // 
-            // tb_profile_armyitem
-            // 
-            this.tb_profile_armyitem.Location = new System.Drawing.Point(251, 510);
-            this.tb_profile_armyitem.Name = "tb_profile_armyitem";
-            this.tb_profile_armyitem.Size = new System.Drawing.Size(100, 22);
-            this.tb_profile_armyitem.TabIndex = 144;
-            // 
-            // lb_profile_armyitem
-            // 
-            this.lb_profile_armyitem.AutoSize = true;
-            this.lb_profile_armyitem.Location = new System.Drawing.Point(194, 520);
-            this.lb_profile_armyitem.Name = "lb_profile_armyitem";
-            this.lb_profile_armyitem.Size = new System.Drawing.Size(53, 12);
-            this.lb_profile_armyitem.TabIndex = 143;
-            this.lb_profile_armyitem.Text = "服役期間";
-            // 
-            // lb_profile_noarmyreason
-            // 
-            this.lb_profile_noarmyreason.AutoSize = true;
-            this.lb_profile_noarmyreason.Location = new System.Drawing.Point(374, 516);
-            this.lb_profile_noarmyreason.Name = "lb_profile_noarmyreason";
-            this.lb_profile_noarmyreason.Size = new System.Drawing.Size(53, 12);
-            this.lb_profile_noarmyreason.TabIndex = 145;
-            this.lb_profile_noarmyreason.Text = "免役說明";
-            // 
-            // tb_profile_noarmyreason
-            // 
-            this.tb_profile_noarmyreason.Location = new System.Drawing.Point(442, 510);
-            this.tb_profile_noarmyreason.Name = "tb_profile_noarmyreason";
-            this.tb_profile_noarmyreason.Size = new System.Drawing.Size(679, 22);
-            this.tb_profile_noarmyreason.TabIndex = 146;
             // 
             // UC_data_interview
             // 

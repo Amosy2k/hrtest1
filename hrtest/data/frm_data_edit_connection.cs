@@ -58,5 +58,10 @@ namespace hrtest.data
         {
 
         }
+
+        private void btn_accept_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

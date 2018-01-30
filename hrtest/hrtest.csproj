@@ -56,6 +56,12 @@
     <Compile Include="data\frm_data_calander.Designer.cs">
       <DependentUpon>frm_data_calander.cs</DependentUpon>
     </Compile>
+    <Compile Include="data\frm_data_createnewconnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data\frm_data_createnewconnection.Designer.cs">
+      <DependentUpon>frm_data_createnewconnection.cs</DependentUpon>
+    </Compile>
     <Compile Include="data\frm_data_edit_connection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,7 @@
     <Compile Include="grant\frm_grant_changepassword.Designer.cs">
       <DependentUpon>frm_grant_changepassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlInert.cs" />
     <Compile Include="TestMain.cs" />
     <Compile Include="Main\frm_login.cs">
       <SubType>Form</SubType>
@@ -127,6 +134,9 @@
     </Compile>
     <EmbeddedResource Include="data\frm_data_calander.resx">
       <DependentUpon>frm_data_calander.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\frm_data_createnewconnection.resx">
+      <DependentUpon>frm_data_createnewconnection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="data\frm_data_edit_connection.resx">
       <DependentUpon>frm_data_edit_connection.cs</DependentUpon>

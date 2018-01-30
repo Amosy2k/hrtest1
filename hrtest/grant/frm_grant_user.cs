@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
+using hrtest;
 
 namespace hrtest.grant
 {
@@ -29,8 +30,9 @@ namespace hrtest.grant
         private void frm_grant_user_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(cs);
-            SqlCommand cmd = new SqlCommand("Select username, active from [user] where UserName=@username", con);
-            cmd.Parameters.AddWithValue("@username", Account);
+            SqlCommand cmd = new SqlCommand(SqlInert.ProfileInsertmethod(), con);
+            cmd.Parameters.AddWithValue("@jobname", Account);
+
             con.Open();
             SqlDataAdapter adapt = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
