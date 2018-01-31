@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Configuration;
 using System.Data.SqlClient;
 
 namespace hrtest.grant
@@ -16,7 +9,6 @@ namespace hrtest.grant
     {
         public string Account;
         public static string Accountpassword;
-        string cs = ConfigurationManager.ConnectionStrings["User"].ConnectionString;
 
         public frm_grant_sa(string ac, string acpw)
         {
@@ -27,26 +19,24 @@ namespace hrtest.grant
 
         private void frm_grant_sa_Load(object sender, EventArgs e)
         {
-            string cs = ConfigurationManager.ConnectionStrings["User"].ConnectionString;
-            SqlConnection con = new SqlConnection(cs);
-            SqlCommand cmd = new SqlCommand("Select username, active from [user] where UserName=@username", con);
+            SqlConnection con = new SqlConnection(SqlLink.linkmethod());
+            SqlCommand cmd = new SqlCommand(SqlSelect.GrantLoadlocalusermethod(), con);
             cmd.Parameters.AddWithValue("@username", Account);
             con.Open();
             SqlDataAdapter adapt = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             adapt.Fill(ds);
             con.Close();
-            dataGridView1.DataSource = ds.Tables[0];
+            dgv_grant_sa_localuser.DataSource = ds.Tables[0];
 
-            string cs1 = ConfigurationManager.ConnectionStrings["User"].ConnectionString;
-            SqlConnection con1 = new SqlConnection(cs1);
-            SqlCommand cmd1 = new SqlCommand("Select username, active from [user] ", con1);
+            SqlConnection con1 = new SqlConnection(SqlLink.linkmethod());
+            SqlCommand cmd1 = new SqlCommand(SqlSelect.GrantLoadAllusermethod(), con1);
             con1.Open();
             SqlDataAdapter adapt1 = new SqlDataAdapter(cmd1);
             DataSet ds1 = new DataSet();
             adapt1.Fill(ds1);
             con.Close();
-            dataGridView2.DataSource = ds1.Tables[0];
+            dgv_grant_sa_alluser.DataSource = ds1.Tables[0];
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -55,7 +45,7 @@ namespace hrtest.grant
             {
                 return;
             }
-            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "ChangePassword")
+            if (dgv_grant_sa_localuser.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "ChangePassword")
             {
                 frm_grant_changepassword changepassword = new frm_grant_changepassword(Account, Accountpassword);
                 changepassword.ShowDialog();
@@ -68,33 +58,34 @@ namespace hrtest.grant
             {
                 return;
             }
-            if (dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "SendEmail")
+            if (dgv_grant_sa_alluser.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "SendEmail")
             {
                 frm_grant_changepassword changepassword = new frm_grant_changepassword(Account, Accountpassword);
                 changepassword.ShowDialog();
             }
 
-            if (dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Delete")
+            if (dgv_grant_sa_alluser.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Delete")
             {
                 DialogResult dr = MessageBox.Show("刪除帳號", "確定刪除嗎?", MessageBoxButtons.OKCancel);
                 switch (dr)
                 {
                     case DialogResult.OK:
-                        SqlConnection con = new SqlConnection(cs);
-                        SqlCommand cmd = new SqlCommand("delete from [user] where username = @username", con);
-                        cmd.Parameters.AddWithValue("@username", dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value);
+                        SqlConnection con = new SqlConnection(SqlLink.linkmethod());
+                        SqlCommand cmd = new SqlCommand(SqlDelete.AlluserDeletemethod(), con);
+                        cmd.Parameters.AddWithValue("@username", dgv_grant_sa_alluser.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("刪除成功");
-                        dataGridView2.DataSource = null;
-                        SqlConnection con1 = new SqlConnection(cs);
-                        SqlCommand cmd1 = new SqlCommand("select username, active  from [user]", con1);
+                        dgv_grant_sa_alluser.DataSource = null;
+
+                        SqlConnection con1 = new SqlConnection(SqlLink.linkmethod());
+                        SqlCommand cmd1 = new SqlCommand(SqlSelect.GrantLoadAllusermethod(), con1);
                         con1.Open();
                         SqlDataAdapter adapt1 = new SqlDataAdapter(cmd1);
                         DataSet ds1 = new DataSet();
                         adapt1.Fill(ds1);
                         con.Close();
-                        dataGridView2.DataSource = ds1.Tables[0];
+                        dgv_grant_sa_alluser.DataSource = ds1.Tables[0];
                         break;
                     case DialogResult.Cancel:
                         break;
@@ -105,7 +96,7 @@ namespace hrtest.grant
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            grant.frm_grant_adduser grant_Adduser = new frm_grant_adduser();
+            frm_grant_adduser grant_Adduser = new frm_grant_adduser();
             grant_Adduser.ShowDialog();
         }
     }

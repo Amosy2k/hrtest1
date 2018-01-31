@@ -18,9 +18,6 @@ namespace hrtest
         {
             InitializeComponent();
         }
-        //Connection String
-        string cs = ConfigurationManager.ConnectionStrings["User"].ConnectionString;
-        //btn_Submit Click event
         private void button1_Click(object sender, EventArgs e)
         {
             if (tb_account.Text == "" || tb_password.Text == "")
@@ -31,8 +28,8 @@ namespace hrtest
             try
             {
                 //Create SqlConnection
-                SqlConnection con = new SqlConnection(cs);
-                SqlCommand cmd = new SqlCommand("Select * from [user] where UserName=@username and Password=@password", con);
+                SqlConnection con = new SqlConnection(SqlLink.linkmethod());
+                SqlCommand cmd = new SqlCommand(SqlSelect.LoginSelectmethod(), con);
                 cmd.Parameters.AddWithValue("@username", tb_account.Text);
                 cmd.Parameters.AddWithValue("@password", tb_password.Text);
                 con.Open();

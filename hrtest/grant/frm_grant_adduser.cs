@@ -14,7 +14,6 @@ namespace hrtest.grant
 {
     public partial class frm_grant_adduser : Form
     {
-        string cs = ConfigurationManager.ConnectionStrings["User"].ConnectionString;
         public frm_grant_adduser()
         {
             InitializeComponent();
@@ -27,8 +26,8 @@ namespace hrtest.grant
 
         private void btn_accept_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(cs);
-            SqlCommand cmd = new SqlCommand("Insert into [user](username,password, active, [grant], email) values(@username, @password, 'N', @grant, @email)", con);
+            SqlConnection con = new SqlConnection(SqlLink.linkmethod());
+            SqlCommand cmd = new SqlCommand(SqlInsert.Addusermethod(), con);
             cmd.Parameters.AddWithValue("@username", tb_account.Text);
             cmd.Parameters.AddWithValue("@password", tb_password.Text);
             cmd.Parameters.AddWithValue("@grant", cb_group.Text);
@@ -45,8 +44,8 @@ namespace hrtest.grant
 
         private void btn_accountcheck_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(cs);
-            SqlCommand cmd = new SqlCommand("select count(username) from [user] where username = @username", con);
+            SqlConnection con = new SqlConnection(SqlLink.linkmethod());
+            SqlCommand cmd = new SqlCommand(SqlSelect.UserCheckmethod(), con);
             cmd.Parameters.AddWithValue("@username", tb_account.Text);
             con.Open();
             SqlDataReader dataReader = cmd.ExecuteReader();

@@ -18,7 +18,6 @@ namespace hrtest.grant
 
         public string Account;
         public static string Accountpassword;
-        string cs = ConfigurationManager.ConnectionStrings["User"].ConnectionString;
 
         public frm_grant_user(string ac, string acpw)
         {
@@ -29,16 +28,15 @@ namespace hrtest.grant
 
         private void frm_grant_user_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(cs);
-            SqlCommand cmd = new SqlCommand(SqlInert.ProfileInsertmethod(), con);
-            cmd.Parameters.AddWithValue("@jobname", Account);
-
+            SqlConnection con = new SqlConnection(SqlLink.linkmethod());
+            SqlCommand cmd = new SqlCommand(SqlSelect.GrantLoadlocalusermethod(), con);
+            cmd.Parameters.AddWithValue("@username", Account);
             con.Open();
             SqlDataAdapter adapt = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             adapt.Fill(ds);
             con.Close();
-            dataGridView1.DataSource = ds.Tables[0];
+            dgv_grant_user_localuser.DataSource = ds.Tables[0];
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -47,7 +45,7 @@ namespace hrtest.grant
             {
                 return;
             }
-            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "ChangePassword")
+            if (dgv_grant_user_localuser.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "ChangePassword")
             {
                 frm_grant_changepassword changepassword = new frm_grant_changepassword(Account, Accountpassword);
                 changepassword.ShowDialog();

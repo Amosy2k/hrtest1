@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.gb_localuser = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_grant_sa_localuser = new System.Windows.Forms.DataGridView();
             this.ChangePassword = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gb_alluser = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgv_grant_sa_alluser = new System.Windows.Forms.DataGridView();
             this.SendEmail = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_add = new System.Windows.Forms.Button();
             this.gb_localuser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_grant_sa_localuser)).BeginInit();
             this.gb_alluser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_grant_sa_alluser)).BeginInit();
             this.SuspendLayout();
             // 
             // gb_localuser
             // 
-            this.gb_localuser.Controls.Add(this.dataGridView1);
+            this.gb_localuser.Controls.Add(this.dgv_grant_sa_localuser);
             this.gb_localuser.Location = new System.Drawing.Point(13, 13);
             this.gb_localuser.Name = "gb_localuser";
             this.gb_localuser.Size = new System.Drawing.Size(877, 125);
@@ -52,23 +52,23 @@
             this.gb_localuser.TabStop = false;
             this.gb_localuser.Text = "LocalUser";
             // 
-            // dataGridView1
+            // dgv_grant_sa_localuser
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_grant_sa_localuser.AllowUserToAddRows = false;
+            this.dgv_grant_sa_localuser.AllowUserToDeleteRows = false;
+            this.dgv_grant_sa_localuser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_grant_sa_localuser.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_grant_sa_localuser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_grant_sa_localuser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ChangePassword});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(871, 104);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgv_grant_sa_localuser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_grant_sa_localuser.Location = new System.Drawing.Point(3, 18);
+            this.dgv_grant_sa_localuser.Name = "dgv_grant_sa_localuser";
+            this.dgv_grant_sa_localuser.ReadOnly = true;
+            this.dgv_grant_sa_localuser.RowTemplate.Height = 24;
+            this.dgv_grant_sa_localuser.Size = new System.Drawing.Size(871, 104);
+            this.dgv_grant_sa_localuser.TabIndex = 0;
+            this.dgv_grant_sa_localuser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ChangePassword
             // 
@@ -80,7 +80,7 @@
             // 
             // gb_alluser
             // 
-            this.gb_alluser.Controls.Add(this.dataGridView2);
+            this.gb_alluser.Controls.Add(this.dgv_grant_sa_alluser);
             this.gb_alluser.Controls.Add(this.btn_add);
             this.gb_alluser.Location = new System.Drawing.Point(13, 145);
             this.gb_alluser.Name = "gb_alluser";
@@ -89,23 +89,23 @@
             this.gb_alluser.TabStop = false;
             this.gb_alluser.Text = "Alluser";
             // 
-            // dataGridView2
+            // dgv_grant_sa_alluser
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_grant_sa_alluser.AllowUserToAddRows = false;
+            this.dgv_grant_sa_alluser.AllowUserToDeleteRows = false;
+            this.dgv_grant_sa_alluser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_grant_sa_alluser.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_grant_sa_alluser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_grant_sa_alluser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SendEmail,
             this.Delete});
-            this.dataGridView2.Location = new System.Drawing.Point(7, 52);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(864, 189);
-            this.dataGridView2.TabIndex = 1;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dgv_grant_sa_alluser.Location = new System.Drawing.Point(7, 52);
+            this.dgv_grant_sa_alluser.Name = "dgv_grant_sa_alluser";
+            this.dgv_grant_sa_alluser.ReadOnly = true;
+            this.dgv_grant_sa_alluser.RowTemplate.Height = 24;
+            this.dgv_grant_sa_alluser.Size = new System.Drawing.Size(864, 189);
+            this.dgv_grant_sa_alluser.TabIndex = 1;
+            this.dgv_grant_sa_alluser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // SendEmail
             // 
@@ -144,9 +144,9 @@
             this.Text = "權限管理_管理者";
             this.Load += new System.EventHandler(this.frm_grant_sa_Load);
             this.gb_localuser.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_grant_sa_localuser)).EndInit();
             this.gb_alluser.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_grant_sa_alluser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,10 +154,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gb_localuser;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_grant_sa_localuser;
         private System.Windows.Forms.GroupBox gb_alluser;
         private System.Windows.Forms.DataGridViewButtonColumn ChangePassword;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgv_grant_sa_alluser;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.DataGridViewLinkColumn SendEmail;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;

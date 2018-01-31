@@ -16,7 +16,6 @@ namespace hrtest.grant
     {
         public string Account;
         public static string Accountpassword;
-        string cs = ConfigurationManager.ConnectionStrings["User"].ConnectionString;
 
         public frm_grant_changepassword(string ac, string acpw)
         {
@@ -63,9 +62,8 @@ namespace hrtest.grant
             {
                 if (pb_oldpassword_correct.Visible == true && pb_newpassword_correct.Visible == true && pb_newpasswordcheck_correct.Visible == true)
                 {
-                    string cs = ConfigurationManager.ConnectionStrings["User"].ConnectionString;
-                    SqlConnection con = new SqlConnection(cs);
-                    SqlCommand cmd = new SqlCommand("update [user] set Password=@password where UserName=@username ", con);
+                    SqlConnection con = new SqlConnection(SqlLink.linkmethod());
+                    SqlCommand cmd = new SqlCommand(SqlUpdate.ChangePasswordmethod(), con);
                     cmd.Parameters.AddWithValue("@username", Account);
                     cmd.Parameters.AddWithValue("@password", tb_newpassword.Text);
                     con.Open();

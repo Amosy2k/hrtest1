@@ -92,7 +92,7 @@
     <Compile Include="grant\frm_grant_changepassword.Designer.cs">
       <DependentUpon>frm_grant_changepassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="SqlInert.cs" />
+    <Compile Include="SqlComman.cs" />
     <Compile Include="TestMain.cs" />
     <Compile Include="Main\frm_login.cs">
       <SubType>Form</SubType>

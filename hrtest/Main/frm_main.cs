@@ -17,8 +17,6 @@ namespace hrtest
     {
         public string Account;
         public static string Accountpassword;
-        string cs = ConfigurationManager.ConnectionStrings["User"].ConnectionString;
-
 
         public frm_main(string ac, string acpw)
         {

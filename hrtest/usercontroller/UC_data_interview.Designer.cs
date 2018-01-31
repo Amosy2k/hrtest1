@@ -30,7 +30,7 @@
         {
             this.tc_interview = new System.Windows.Forms.TabControl();
             this.tp_profile = new System.Windows.Forms.TabPage();
-            this.tb_profile_noarmyreason = new System.Windows.Forms.TextBox();
+            this.tb_profile_NonArmyReason = new System.Windows.Forms.TextBox();
             this.lb_profile_noarmyreason = new System.Windows.Forms.Label();
             this.tb_profile_armyitem = new System.Windows.Forms.TextBox();
             this.lb_profile_armyitem = new System.Windows.Forms.Label();
@@ -42,15 +42,15 @@
             this.btn_profile_delete = new System.Windows.Forms.Button();
             this.btn_profile_cancel = new System.Windows.Forms.Button();
             this.btn_profile_OK = new System.Windows.Forms.Button();
-            this.tb_profile_Trait = new System.Windows.Forms.TextBox();
+            this.tb_profile_ShowYourSelf = new System.Windows.Forms.TextBox();
             this.lb_profile_Trait = new System.Windows.Forms.Label();
-            this.tb_profile_ispromise = new System.Windows.Forms.TextBox();
+            this.tb_profile_PromiseFromIs = new System.Windows.Forms.TextBox();
             this.lb_profile_ispromise = new System.Windows.Forms.Label();
-            this.tb_profile_wishmanager = new System.Windows.Forms.TextBox();
+            this.tb_profile_mindmanager = new System.Windows.Forms.TextBox();
             this.lb_profile_wishmanager = new System.Windows.Forms.Label();
-            this.tb_profile_future = new System.Windows.Forms.TextBox();
+            this.tb_profile_futurehope = new System.Windows.Forms.TextBox();
             this.lb_profile_future = new System.Windows.Forms.Label();
-            this.tb_profile_reasonforisland = new System.Windows.Forms.TextBox();
+            this.tb_profile_firstinis = new System.Windows.Forms.TextBox();
             this.lb_profile_reasonforisland = new System.Windows.Forms.Label();
             this.tb_profile_habbit = new System.Windows.Forms.TextBox();
             this.lb_profile_habbit = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.lb_profile_disadvantage = new System.Windows.Forms.Label();
             this.tb_profile_advantage = new System.Windows.Forms.TextBox();
             this.lb_profile_advantage = new System.Windows.Forms.Label();
-            this.tb_profile_register = new System.Windows.Forms.TextBox();
+            this.tb_profile_registdate = new System.Windows.Forms.TextBox();
             this.lb_profile_register = new System.Windows.Forms.Label();
             this.tb_profile_wishslalry = new System.Windows.Forms.TextBox();
             this.lb_profile_wishslalry = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             this.lb_profile_careinwork = new System.Windows.Forms.Label();
             this.tb_profile_friendname = new System.Windows.Forms.TextBox();
             this.lb_profile_friendname = new System.Windows.Forms.Label();
-            this.tb_profile_relationship = new System.Windows.Forms.TextBox();
+            this.tb_profile_friendrelationship = new System.Windows.Forms.TextBox();
             this.lb_profile_relationship = new System.Windows.Forms.Label();
             this.tb_profile_friendincompany = new System.Windows.Forms.TextBox();
             this.lb_profile_friendincompany = new System.Windows.Forms.Label();
@@ -164,6 +164,9 @@
             this.rb_result_no = new System.Windows.Forms.RadioButton();
             this.rb_result_yes = new System.Windows.Forms.RadioButton();
             this.btn_result_commandcreate = new System.Windows.Forms.Button();
+            this.LanguageDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ExperienceDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.EducationDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tc_interview.SuspendLayout();
             this.tp_profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_profile_languageskill)).BeginInit();
@@ -193,7 +196,7 @@
             // tp_profile
             // 
             this.tp_profile.AutoScroll = true;
-            this.tp_profile.Controls.Add(this.tb_profile_noarmyreason);
+            this.tp_profile.Controls.Add(this.tb_profile_NonArmyReason);
             this.tp_profile.Controls.Add(this.lb_profile_noarmyreason);
             this.tp_profile.Controls.Add(this.tb_profile_armyitem);
             this.tp_profile.Controls.Add(this.lb_profile_armyitem);
@@ -205,15 +208,15 @@
             this.tp_profile.Controls.Add(this.btn_profile_delete);
             this.tp_profile.Controls.Add(this.btn_profile_cancel);
             this.tp_profile.Controls.Add(this.btn_profile_OK);
-            this.tp_profile.Controls.Add(this.tb_profile_Trait);
+            this.tp_profile.Controls.Add(this.tb_profile_ShowYourSelf);
             this.tp_profile.Controls.Add(this.lb_profile_Trait);
-            this.tp_profile.Controls.Add(this.tb_profile_ispromise);
+            this.tp_profile.Controls.Add(this.tb_profile_PromiseFromIs);
             this.tp_profile.Controls.Add(this.lb_profile_ispromise);
-            this.tp_profile.Controls.Add(this.tb_profile_wishmanager);
+            this.tp_profile.Controls.Add(this.tb_profile_mindmanager);
             this.tp_profile.Controls.Add(this.lb_profile_wishmanager);
-            this.tp_profile.Controls.Add(this.tb_profile_future);
+            this.tp_profile.Controls.Add(this.tb_profile_futurehope);
             this.tp_profile.Controls.Add(this.lb_profile_future);
-            this.tp_profile.Controls.Add(this.tb_profile_reasonforisland);
+            this.tp_profile.Controls.Add(this.tb_profile_firstinis);
             this.tp_profile.Controls.Add(this.lb_profile_reasonforisland);
             this.tp_profile.Controls.Add(this.tb_profile_habbit);
             this.tp_profile.Controls.Add(this.lb_profile_habbit);
@@ -221,7 +224,7 @@
             this.tp_profile.Controls.Add(this.lb_profile_disadvantage);
             this.tp_profile.Controls.Add(this.tb_profile_advantage);
             this.tp_profile.Controls.Add(this.lb_profile_advantage);
-            this.tp_profile.Controls.Add(this.tb_profile_register);
+            this.tp_profile.Controls.Add(this.tb_profile_registdate);
             this.tp_profile.Controls.Add(this.lb_profile_register);
             this.tp_profile.Controls.Add(this.tb_profile_wishslalry);
             this.tp_profile.Controls.Add(this.lb_profile_wishslalry);
@@ -229,7 +232,7 @@
             this.tp_profile.Controls.Add(this.lb_profile_careinwork);
             this.tp_profile.Controls.Add(this.tb_profile_friendname);
             this.tp_profile.Controls.Add(this.lb_profile_friendname);
-            this.tp_profile.Controls.Add(this.tb_profile_relationship);
+            this.tp_profile.Controls.Add(this.tb_profile_friendrelationship);
             this.tp_profile.Controls.Add(this.lb_profile_relationship);
             this.tp_profile.Controls.Add(this.tb_profile_friendincompany);
             this.tp_profile.Controls.Add(this.lb_profile_friendincompany);
@@ -311,12 +314,12 @@
             this.tp_profile.Text = "人資資料";
             this.tp_profile.UseVisualStyleBackColor = true;
             // 
-            // tb_profile_noarmyreason
+            // tb_profile_NonArmyReason
             // 
-            this.tb_profile_noarmyreason.Location = new System.Drawing.Point(442, 510);
-            this.tb_profile_noarmyreason.Name = "tb_profile_noarmyreason";
-            this.tb_profile_noarmyreason.Size = new System.Drawing.Size(679, 22);
-            this.tb_profile_noarmyreason.TabIndex = 146;
+            this.tb_profile_NonArmyReason.Location = new System.Drawing.Point(442, 510);
+            this.tb_profile_NonArmyReason.Name = "tb_profile_NonArmyReason";
+            this.tb_profile_NonArmyReason.Size = new System.Drawing.Size(679, 22);
+            this.tb_profile_NonArmyReason.TabIndex = 146;
             // 
             // lb_profile_noarmyreason
             // 
@@ -382,7 +385,7 @@
             // 
             // tb_profile_interviewdate
             // 
-            this.tb_profile_interviewdate.Location = new System.Drawing.Point(507, 71);
+            this.tb_profile_interviewdate.Location = new System.Drawing.Point(506, 74);
             this.tb_profile_interviewdate.Name = "tb_profile_interviewdate";
             this.tb_profile_interviewdate.Size = new System.Drawing.Size(100, 22);
             this.tb_profile_interviewdate.TabIndex = 137;
@@ -416,12 +419,12 @@
             this.btn_profile_OK.UseVisualStyleBackColor = true;
             this.btn_profile_OK.Click += new System.EventHandler(this.btn_profile_OK_Click);
             // 
-            // tb_profile_Trait
+            // tb_profile_ShowYourSelf
             // 
-            this.tb_profile_Trait.Location = new System.Drawing.Point(212, 1257);
-            this.tb_profile_Trait.Name = "tb_profile_Trait";
-            this.tb_profile_Trait.Size = new System.Drawing.Size(923, 22);
-            this.tb_profile_Trait.TabIndex = 133;
+            this.tb_profile_ShowYourSelf.Location = new System.Drawing.Point(212, 1257);
+            this.tb_profile_ShowYourSelf.Name = "tb_profile_ShowYourSelf";
+            this.tb_profile_ShowYourSelf.Size = new System.Drawing.Size(923, 22);
+            this.tb_profile_ShowYourSelf.TabIndex = 133;
             // 
             // lb_profile_Trait
             // 
@@ -432,12 +435,12 @@
             this.lb_profile_Trait.TabIndex = 132;
             this.lb_profile_Trait.Text = "覺得自己哪個特質最強烈？現在您有三十秒的自我推薦時間，您會透過什麼方式讓我們對您印象深刻？";
             // 
-            // tb_profile_ispromise
+            // tb_profile_PromiseFromIs
             // 
-            this.tb_profile_ispromise.Location = new System.Drawing.Point(212, 1205);
-            this.tb_profile_ispromise.Name = "tb_profile_ispromise";
-            this.tb_profile_ispromise.Size = new System.Drawing.Size(923, 22);
-            this.tb_profile_ispromise.TabIndex = 131;
+            this.tb_profile_PromiseFromIs.Location = new System.Drawing.Point(212, 1205);
+            this.tb_profile_PromiseFromIs.Name = "tb_profile_PromiseFromIs";
+            this.tb_profile_PromiseFromIs.Size = new System.Drawing.Size(923, 22);
+            this.tb_profile_PromiseFromIs.TabIndex = 131;
             // 
             // lb_profile_ispromise
             // 
@@ -448,12 +451,12 @@
             this.lb_profile_ispromise.TabIndex = 130;
             this.lb_profile_ispromise.Text = "您希望亦思給予您什麼承諾？(任何方面)";
             // 
-            // tb_profile_wishmanager
+            // tb_profile_mindmanager
             // 
-            this.tb_profile_wishmanager.Location = new System.Drawing.Point(212, 1153);
-            this.tb_profile_wishmanager.Name = "tb_profile_wishmanager";
-            this.tb_profile_wishmanager.Size = new System.Drawing.Size(923, 22);
-            this.tb_profile_wishmanager.TabIndex = 129;
+            this.tb_profile_mindmanager.Location = new System.Drawing.Point(212, 1153);
+            this.tb_profile_mindmanager.Name = "tb_profile_mindmanager";
+            this.tb_profile_mindmanager.Size = new System.Drawing.Size(923, 22);
+            this.tb_profile_mindmanager.TabIndex = 129;
             // 
             // lb_profile_wishmanager
             // 
@@ -464,12 +467,12 @@
             this.lb_profile_wishmanager.TabIndex = 128;
             this.lb_profile_wishmanager.Text = "您目前的理想主管是什麼樣的人？";
             // 
-            // tb_profile_future
+            // tb_profile_futurehope
             // 
-            this.tb_profile_future.Location = new System.Drawing.Point(212, 1103);
-            this.tb_profile_future.Name = "tb_profile_future";
-            this.tb_profile_future.Size = new System.Drawing.Size(923, 22);
-            this.tb_profile_future.TabIndex = 127;
+            this.tb_profile_futurehope.Location = new System.Drawing.Point(212, 1103);
+            this.tb_profile_futurehope.Name = "tb_profile_futurehope";
+            this.tb_profile_futurehope.Size = new System.Drawing.Size(923, 22);
+            this.tb_profile_futurehope.TabIndex = 127;
             // 
             // lb_profile_future
             // 
@@ -480,12 +483,12 @@
             this.lb_profile_future.TabIndex = 126;
             this.lb_profile_future.Text = "請描述您對未來的目標、希望。";
             // 
-            // tb_profile_reasonforisland
+            // tb_profile_firstinis
             // 
-            this.tb_profile_reasonforisland.Location = new System.Drawing.Point(212, 1054);
-            this.tb_profile_reasonforisland.Name = "tb_profile_reasonforisland";
-            this.tb_profile_reasonforisland.Size = new System.Drawing.Size(923, 22);
-            this.tb_profile_reasonforisland.TabIndex = 125;
+            this.tb_profile_firstinis.Location = new System.Drawing.Point(212, 1054);
+            this.tb_profile_firstinis.Name = "tb_profile_firstinis";
+            this.tb_profile_firstinis.Size = new System.Drawing.Size(923, 22);
+            this.tb_profile_firstinis.TabIndex = 125;
             // 
             // lb_profile_reasonforisland
             // 
@@ -514,9 +517,9 @@
             // 
             // tb_profile_disadvantage
             // 
-            this.tb_profile_disadvantage.Location = new System.Drawing.Point(632, 972);
+            this.tb_profile_disadvantage.Location = new System.Drawing.Point(641, 972);
             this.tb_profile_disadvantage.Name = "tb_profile_disadvantage";
-            this.tb_profile_disadvantage.Size = new System.Drawing.Size(484, 22);
+            this.tb_profile_disadvantage.Size = new System.Drawing.Size(475, 22);
             this.tb_profile_disadvantage.TabIndex = 121;
             // 
             // lb_profile_disadvantage
@@ -544,12 +547,12 @@
             this.lb_profile_advantage.TabIndex = 118;
             this.lb_profile_advantage.Text = "優點";
             // 
-            // tb_profile_register
+            // tb_profile_registdate
             // 
-            this.tb_profile_register.Location = new System.Drawing.Point(997, 945);
-            this.tb_profile_register.Name = "tb_profile_register";
-            this.tb_profile_register.Size = new System.Drawing.Size(119, 22);
-            this.tb_profile_register.TabIndex = 117;
+            this.tb_profile_registdate.Location = new System.Drawing.Point(997, 945);
+            this.tb_profile_registdate.Name = "tb_profile_registdate";
+            this.tb_profile_registdate.Size = new System.Drawing.Size(119, 22);
+            this.tb_profile_registdate.TabIndex = 117;
             // 
             // lb_profile_register
             // 
@@ -594,9 +597,9 @@
             // 
             // tb_profile_friendname
             // 
-            this.tb_profile_friendname.Location = new System.Drawing.Point(975, 916);
+            this.tb_profile_friendname.Location = new System.Drawing.Point(997, 916);
             this.tb_profile_friendname.Name = "tb_profile_friendname";
-            this.tb_profile_friendname.Size = new System.Drawing.Size(141, 22);
+            this.tb_profile_friendname.Size = new System.Drawing.Size(119, 22);
             this.tb_profile_friendname.TabIndex = 111;
             // 
             // lb_profile_friendname
@@ -608,12 +611,12 @@
             this.lb_profile_friendname.TabIndex = 110;
             this.lb_profile_friendname.Text = "姓名";
             // 
-            // tb_profile_relationship
+            // tb_profile_friendrelationship
             // 
-            this.tb_profile_relationship.Location = new System.Drawing.Point(641, 919);
-            this.tb_profile_relationship.Name = "tb_profile_relationship";
-            this.tb_profile_relationship.Size = new System.Drawing.Size(145, 22);
-            this.tb_profile_relationship.TabIndex = 109;
+            this.tb_profile_friendrelationship.Location = new System.Drawing.Point(641, 919);
+            this.tb_profile_friendrelationship.Name = "tb_profile_friendrelationship";
+            this.tb_profile_friendrelationship.Size = new System.Drawing.Size(145, 22);
+            this.tb_profile_friendrelationship.TabIndex = 109;
             // 
             // lb_profile_relationship
             // 
@@ -914,7 +917,11 @@
             // 
             // dgv_profile_languageskill
             // 
+            this.dgv_profile_languageskill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_profile_languageskill.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_profile_languageskill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_profile_languageskill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.LanguageDelete});
             this.dgv_profile_languageskill.Location = new System.Drawing.Point(205, 748);
             this.dgv_profile_languageskill.Name = "dgv_profile_languageskill";
             this.dgv_profile_languageskill.RowTemplate.Height = 24;
@@ -1042,7 +1049,11 @@
             // 
             // dgv_profile_express
             // 
+            this.dgv_profile_express.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_profile_express.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_profile_express.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_profile_express.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ExperienceDelete});
             this.dgv_profile_express.Location = new System.Drawing.Point(212, 364);
             this.dgv_profile_express.Name = "dgv_profile_express";
             this.dgv_profile_express.RowTemplate.Height = 24;
@@ -1070,7 +1081,11 @@
             // 
             // dgv_profile_graduate
             // 
+            this.dgv_profile_graduate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_profile_graduate.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_profile_graduate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_profile_graduate.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EducationDelete});
             this.dgv_profile_graduate.Location = new System.Drawing.Point(212, 230);
             this.dgv_profile_graduate.Name = "dgv_profile_graduate";
             this.dgv_profile_graduate.RowTemplate.Height = 24;
@@ -1180,7 +1195,7 @@
             // lb_profile_sex
             // 
             this.lb_profile_sex.AutoSize = true;
-            this.lb_profile_sex.Location = new System.Drawing.Point(419, 105);
+            this.lb_profile_sex.Location = new System.Drawing.Point(416, 109);
             this.lb_profile_sex.Name = "lb_profile_sex";
             this.lb_profile_sex.Size = new System.Drawing.Size(41, 12);
             this.lb_profile_sex.TabIndex = 13;
@@ -1189,7 +1204,7 @@
             // lb_profile_interviewdate
             // 
             this.lb_profile_interviewdate.AutoSize = true;
-            this.lb_profile_interviewdate.Location = new System.Drawing.Point(413, 82);
+            this.lb_profile_interviewdate.Location = new System.Drawing.Point(416, 82);
             this.lb_profile_interviewdate.Name = "lb_profile_interviewdate";
             this.lb_profile_interviewdate.Size = new System.Drawing.Size(74, 12);
             this.lb_profile_interviewdate.TabIndex = 11;
@@ -1544,11 +1559,29 @@
             this.btn_result_commandcreate.Text = "新增面談評語";
             this.btn_result_commandcreate.UseVisualStyleBackColor = true;
             // 
+            // LanguageDelete
+            // 
+            this.LanguageDelete.HeaderText = "Delete";
+            this.LanguageDelete.Name = "LanguageDelete";
+            // 
+            // ExperienceDelete
+            // 
+            this.ExperienceDelete.HeaderText = "Delete";
+            this.ExperienceDelete.Name = "ExperienceDelete";
+            // 
+            // EducationDelete
+            // 
+            this.EducationDelete.HeaderText = "Delete";
+            this.EducationDelete.Name = "EducationDelete";
+            this.EducationDelete.Text = "Delete";
+            this.EducationDelete.UseColumnTextForButtonValue = true;
+            // 
             // UC_data_interview
             // 
             this.Controls.Add(this.tc_interview);
             this.Name = "UC_data_interview";
             this.Size = new System.Drawing.Size(1180, 1380);
+            this.Load += new System.EventHandler(this.UC_data_interview_Load);
             this.tc_interview.ResumeLayout(false);
             this.tp_profile.ResumeLayout(false);
             this.tp_profile.PerformLayout();
@@ -1622,15 +1655,15 @@
         private System.Windows.Forms.Button btn_profile_delete;
         private System.Windows.Forms.Button btn_profile_cancel;
         private System.Windows.Forms.Button btn_profile_OK;
-        private System.Windows.Forms.TextBox tb_profile_Trait;
+        private System.Windows.Forms.TextBox tb_profile_ShowYourSelf;
         private System.Windows.Forms.Label lb_profile_Trait;
-        private System.Windows.Forms.TextBox tb_profile_ispromise;
+        private System.Windows.Forms.TextBox tb_profile_PromiseFromIs;
         private System.Windows.Forms.Label lb_profile_ispromise;
-        private System.Windows.Forms.TextBox tb_profile_wishmanager;
+        private System.Windows.Forms.TextBox tb_profile_mindmanager;
         private System.Windows.Forms.Label lb_profile_wishmanager;
-        private System.Windows.Forms.TextBox tb_profile_future;
+        private System.Windows.Forms.TextBox tb_profile_futurehope;
         private System.Windows.Forms.Label lb_profile_future;
-        private System.Windows.Forms.TextBox tb_profile_reasonforisland;
+        private System.Windows.Forms.TextBox tb_profile_firstinis;
         private System.Windows.Forms.Label lb_profile_reasonforisland;
         private System.Windows.Forms.TextBox tb_profile_habbit;
         private System.Windows.Forms.Label lb_profile_habbit;
@@ -1638,7 +1671,7 @@
         private System.Windows.Forms.Label lb_profile_disadvantage;
         private System.Windows.Forms.TextBox tb_profile_advantage;
         private System.Windows.Forms.Label lb_profile_advantage;
-        private System.Windows.Forms.TextBox tb_profile_register;
+        private System.Windows.Forms.TextBox tb_profile_registdate;
         private System.Windows.Forms.Label lb_profile_register;
         private System.Windows.Forms.TextBox tb_profile_wishslalry;
         private System.Windows.Forms.Label lb_profile_wishslalry;
@@ -1646,7 +1679,7 @@
         private System.Windows.Forms.Label lb_profile_careinwork;
         private System.Windows.Forms.TextBox tb_profile_friendname;
         private System.Windows.Forms.Label lb_profile_friendname;
-        private System.Windows.Forms.TextBox tb_profile_relationship;
+        private System.Windows.Forms.TextBox tb_profile_friendrelationship;
         private System.Windows.Forms.Label lb_profile_relationship;
         private System.Windows.Forms.TextBox tb_profile_friendincompany;
         private System.Windows.Forms.Label lb_profile_friendincompany;
@@ -1703,9 +1736,12 @@
         private System.Windows.Forms.TextBox tb_profile_interviewdate;
         private System.Windows.Forms.TableLayoutPanel tlp_project_list;
         private System.Windows.Forms.Label lb_profile_army;
-        private System.Windows.Forms.TextBox tb_profile_noarmyreason;
+        private System.Windows.Forms.TextBox tb_profile_NonArmyReason;
         private System.Windows.Forms.Label lb_profile_noarmyreason;
         private System.Windows.Forms.TextBox tb_profile_armyitem;
         private System.Windows.Forms.Label lb_profile_armyitem;
+        private System.Windows.Forms.DataGridViewButtonColumn LanguageDelete;
+        private System.Windows.Forms.DataGridViewButtonColumn ExperienceDelete;
+        private System.Windows.Forms.DataGridViewButtonColumn EducationDelete;
     }
 }
