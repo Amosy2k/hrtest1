@@ -115,6 +115,7 @@
             this.btn_profile_graduate = new System.Windows.Forms.Button();
             this.lb_profile_graduate = new System.Windows.Forms.Label();
             this.dgv_profile_graduate = new System.Windows.Forms.DataGridView();
+            this.EducationDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tb_profile_contactormobile = new System.Windows.Forms.TextBox();
             this.lb_profile_contacotrmobile = new System.Windows.Forms.Label();
             this.tb_profile_contactorrelation = new System.Windows.Forms.TextBox();
@@ -164,9 +165,8 @@
             this.rb_result_no = new System.Windows.Forms.RadioButton();
             this.rb_result_yes = new System.Windows.Forms.RadioButton();
             this.btn_result_commandcreate = new System.Windows.Forms.Button();
-            this.LanguageDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ExperienceDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.EducationDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.LanguageDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tc_interview.SuspendLayout();
             this.tp_profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_profile_languageskill)).BeginInit();
@@ -904,6 +904,7 @@
             this.btn_profile_languageskill.TabIndex = 45;
             this.btn_profile_languageskill.Text = "新增";
             this.btn_profile_languageskill.UseVisualStyleBackColor = true;
+            this.btn_profile_languageskill.Click += new System.EventHandler(this.btn_profile_languageskill_Click);
             // 
             // lb_profile_languageskill
             // 
@@ -917,6 +918,8 @@
             // 
             // dgv_profile_languageskill
             // 
+            this.dgv_profile_languageskill.AllowUserToAddRows = false;
+            this.dgv_profile_languageskill.AllowUserToDeleteRows = false;
             this.dgv_profile_languageskill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_profile_languageskill.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_profile_languageskill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1036,6 +1039,7 @@
             this.btn_profile_express.TabIndex = 31;
             this.btn_profile_express.Text = "新增";
             this.btn_profile_express.UseVisualStyleBackColor = true;
+            this.btn_profile_express.Click += new System.EventHandler(this.btn_profile_express_Click);
             // 
             // lb_profile_express
             // 
@@ -1049,6 +1053,8 @@
             // 
             // dgv_profile_express
             // 
+            this.dgv_profile_express.AllowUserToAddRows = false;
+            this.dgv_profile_express.AllowUserToDeleteRows = false;
             this.dgv_profile_express.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_profile_express.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_profile_express.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1068,6 +1074,7 @@
             this.btn_profile_graduate.TabIndex = 28;
             this.btn_profile_graduate.Text = "新增";
             this.btn_profile_graduate.UseVisualStyleBackColor = true;
+            this.btn_profile_graduate.Click += new System.EventHandler(this.btn_profile_graduate_Click);
             // 
             // lb_profile_graduate
             // 
@@ -1081,6 +1088,8 @@
             // 
             // dgv_profile_graduate
             // 
+            this.dgv_profile_graduate.AllowUserToAddRows = false;
+            this.dgv_profile_graduate.AllowUserToDeleteRows = false;
             this.dgv_profile_graduate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_profile_graduate.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_profile_graduate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1091,6 +1100,13 @@
             this.dgv_profile_graduate.RowTemplate.Height = 24;
             this.dgv_profile_graduate.Size = new System.Drawing.Size(916, 109);
             this.dgv_profile_graduate.TabIndex = 26;
+            // 
+            // EducationDelete
+            // 
+            this.EducationDelete.HeaderText = "Delete";
+            this.EducationDelete.Name = "EducationDelete";
+            this.EducationDelete.Text = "Delete";
+            this.EducationDelete.UseColumnTextForButtonValue = true;
             // 
             // tb_profile_contactormobile
             // 
@@ -1559,29 +1575,25 @@
             this.btn_result_commandcreate.Text = "新增面談評語";
             this.btn_result_commandcreate.UseVisualStyleBackColor = true;
             // 
-            // LanguageDelete
-            // 
-            this.LanguageDelete.HeaderText = "Delete";
-            this.LanguageDelete.Name = "LanguageDelete";
-            // 
             // ExperienceDelete
             // 
             this.ExperienceDelete.HeaderText = "Delete";
             this.ExperienceDelete.Name = "ExperienceDelete";
+            this.ExperienceDelete.Text = "Delete";
+            this.ExperienceDelete.UseColumnTextForButtonValue = true;
             // 
-            // EducationDelete
+            // LanguageDelete
             // 
-            this.EducationDelete.HeaderText = "Delete";
-            this.EducationDelete.Name = "EducationDelete";
-            this.EducationDelete.Text = "Delete";
-            this.EducationDelete.UseColumnTextForButtonValue = true;
+            this.LanguageDelete.HeaderText = "Delete";
+            this.LanguageDelete.Name = "LanguageDelete";
+            this.LanguageDelete.Text = "Delete";
+            this.LanguageDelete.UseColumnTextForButtonValue = true;
             // 
             // UC_data_interview
             // 
             this.Controls.Add(this.tc_interview);
             this.Name = "UC_data_interview";
             this.Size = new System.Drawing.Size(1180, 1380);
-            this.Load += new System.EventHandler(this.UC_data_interview_Load);
             this.tc_interview.ResumeLayout(false);
             this.tp_profile.ResumeLayout(false);
             this.tp_profile.PerformLayout();
@@ -1740,8 +1752,8 @@
         private System.Windows.Forms.Label lb_profile_noarmyreason;
         private System.Windows.Forms.TextBox tb_profile_armyitem;
         private System.Windows.Forms.Label lb_profile_armyitem;
+        private System.Windows.Forms.DataGridViewButtonColumn EducationDelete;
         private System.Windows.Forms.DataGridViewButtonColumn LanguageDelete;
         private System.Windows.Forms.DataGridViewButtonColumn ExperienceDelete;
-        private System.Windows.Forms.DataGridViewButtonColumn EducationDelete;
     }
 }

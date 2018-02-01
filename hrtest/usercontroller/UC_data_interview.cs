@@ -133,22 +133,22 @@ namespace hrtest
                     cmd.Parameters.Add("@Armydate", SqlDbType.NChar).Value = tb_profile_armyitem.Text;
                     cmd.Parameters.Add("@NonArmyReason", SqlDbType.NChar).Value = tb_profile_NonArmyReason.Text;
                     cmd.Parameters.Add("@Img", SqlDbType.NChar).Value = DBNull.Value; //pb_profile_profileimg.Location;
-                    cmd.Parameters.Add("@LastUpdatetime", SqlDbType.Date).Value = DateTime.Now;
+                    cmd.Parameters.Add("@LastUpdatetime", SqlDbType.DateTime).Value = DateTime.Now;
                     id = cmd.ExecuteScalar().ToString();
                     //education add
                     cmd.CommandText = SqlInsert.EducationInsertmethod();
                     try
                     {
-                        foreach (DataGridViewRow dr in dgv_profile_graduate.Rows)
+                        for (int i = 0; i <= dgv_profile_graduate.RowCount - 1; i++)
                         {
                             cmd.Parameters.Clear();
                             cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
-                            cmd.Parameters.Add("@SchoolName", SqlDbType.NChar).Value = dr.Cells["SchoolName"].ToString();
-                            cmd.Parameters.Add("@Department", SqlDbType.NChar).Value = dr.Cells["Department"].ToString();
-                            cmd.Parameters.Add("@DateStart", SqlDbType.NChar).Value = dr.Cells["DateStart"].ToString();
-                            cmd.Parameters.Add("@DateEnd", SqlDbType.NChar).Value = dr.Cells["DateEnd"].ToString();
-                            cmd.Parameters.Add("@Graduate", SqlDbType.NChar).Value = dr.Cells["Graduate"].ToString();
-                            cmd.Parameters.Add("@Note", SqlDbType.NChar).Value = dr.Cells["Note"].ToString();
+                            cmd.Parameters.Add("@SchoolName", SqlDbType.NChar).Value = dgv_profile_graduate.Rows[i].Cells["SchoolName"].Value.ToString();// ?? string.Empty;
+                            cmd.Parameters.Add("@Department", SqlDbType.NChar).Value = dgv_profile_graduate.Rows[i].Cells["Department"].Value ?? string.Empty;
+                            cmd.Parameters.Add("@DateStart", SqlDbType.NChar).Value = dgv_profile_graduate.Rows[i].Cells["DateStart"].Value ?? string.Empty;
+                            cmd.Parameters.Add("@DateEnd", SqlDbType.NChar).Value = dgv_profile_graduate.Rows[i].Cells["DateEnd"].Value ?? string.Empty;
+                            cmd.Parameters.Add("@Graduate", SqlDbType.NChar).Value = dgv_profile_graduate.Rows[i].Cells["Graduate"].Value ?? string.Empty;
+                            cmd.Parameters.Add("@Note", SqlDbType.NChar).Value = dgv_profile_graduate.Rows[i].Cells["Note"].Value ?? string.Empty;
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -165,13 +165,13 @@ namespace hrtest
                         {
                             cmd.Parameters.Clear();
                             cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
-                            cmd.Parameters.Add("@CompanyName", SqlDbType.NChar).Value = dr.Cells["CompanyName"].ToString();
-                            cmd.Parameters.Add("@Title", SqlDbType.NChar).Value = dr.Cells["Title"].ToString();
-                            cmd.Parameters.Add("@DateStart", SqlDbType.NChar).Value = dr.Cells["DateStart"].ToString();
-                            cmd.Parameters.Add("@DateEnd", SqlDbType.NChar).Value = dr.Cells["DateEnd"].ToString();
-                            cmd.Parameters.Add("@SatartSalary", SqlDbType.Int).Value = dr.Cells["SatartSalary"].ToString();
-                            cmd.Parameters.Add("@EndSalary", SqlDbType.Int).Value = dr.Cells["EndSalary"].ToString();
-                            cmd.Parameters.Add("@LeaveReason", SqlDbType.NChar).Value = dr.Cells["LeaveReason"].ToString();
+                            cmd.Parameters.Add("@CompanyName", SqlDbType.NChar).Value = dr.Cells["CompanyName"].Value ?? string.Empty;
+                            cmd.Parameters.Add("@Title", SqlDbType.NChar).Value = dr.Cells["Title"].Value ?? string.Empty;
+                            cmd.Parameters.Add("@DateStart", SqlDbType.NChar).Value = dr.Cells["DateStart"].Value ?? string.Empty;
+                            cmd.Parameters.Add("@DateEnd", SqlDbType.NChar).Value = dr.Cells["DateEnd"].Value ?? string.Empty;
+                            cmd.Parameters.Add("@SatartSalary", SqlDbType.Int).Value = dr.Cells["SatartSalary"].Value ?? DBNull.Value;
+                            cmd.Parameters.Add("@EndSalary", SqlDbType.Int).Value = dr.Cells["EndSalary"].Value ?? DBNull.Value;
+                            cmd.Parameters.Add("@LeaveReason", SqlDbType.NChar).Value = dr.Cells["LeaveReason"].Value ?? string.Empty;
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -181,18 +181,18 @@ namespace hrtest
                     }
 
                     //language add
-                    cmd.CommandText = SqlInsert.ExpressInsertmethod();
+                    cmd.CommandText = SqlInsert.LanguageInsertmethod();
                     try
                     {
                         foreach (DataGridViewRow dr in dgv_profile_languageskill.Rows)
                         {
                             cmd.Parameters.Clear();
                             cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
-                            cmd.Parameters.Add("@Language", SqlDbType.NChar).Value = dr.Cells["Language"].ToString();
-                            cmd.Parameters.Add("@Listen", SqlDbType.NChar).Value = dr.Cells["Listen"].ToString();
-                            cmd.Parameters.Add("@Speak", SqlDbType.NChar).Value = dr.Cells["Speak"].ToString();
-                            cmd.Parameters.Add("@Read", SqlDbType.NChar).Value = dr.Cells["Read"].ToString();
-                            cmd.Parameters.Add("@Write", SqlDbType.NChar).Value = dr.Cells["Write"].ToString();
+                            cmd.Parameters.Add("@Language", SqlDbType.NChar).Value = dr.Cells["Language"].Value ?? string.Empty;
+                            cmd.Parameters.Add("@Listen", SqlDbType.NChar).Value = dr.Cells["Listen"].Value ?? string.Empty;
+                            cmd.Parameters.Add("@Speak", SqlDbType.NChar).Value = dr.Cells["Speak"].Value ?? string.Empty;
+                            cmd.Parameters.Add("@Read", SqlDbType.NChar).Value = dr.Cells["Read"].Value ?? string.Empty;
+                            cmd.Parameters.Add("@Write", SqlDbType.NChar).Value = dr.Cells["Write"].Value ?? string.Empty;
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -200,7 +200,6 @@ namespace hrtest
                     {
                         throw ex;
                     }
-
                     sqltr.Commit();
                 }
                 catch (Exception ex)
@@ -218,30 +217,49 @@ namespace hrtest
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message,"新增失敗");    
             }
+            MessageBox.Show("新增成功");
         }
 
-        private void UC_data_interview_Load(object sender, EventArgs e)
+        private void btn_profile_graduate_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(SqlLink.linkmethod());
-            SqlCommand cmd = new SqlCommand(SqlSelect.UserDataInterviewEducationmethod(), con);
-            SqlCommand cmd1 = new SqlCommand(SqlSelect.UserDataInterviewExperiencemethod(), con);
-            SqlCommand cmd2 = new SqlCommand(SqlSelect.UserDataInterviewLanguagemethod(), con);
-            con.Open();
-            SqlDataAdapter adapt = new SqlDataAdapter(cmd);
-            SqlDataAdapter adapt1 = new SqlDataAdapter(cmd1);
-            SqlDataAdapter adapt2 = new SqlDataAdapter(cmd2);
-            DataSet ds = new DataSet();
-            DataSet ds1 = new DataSet();
-            DataSet ds2 = new DataSet();
-            adapt.Fill(ds);
-            adapt1.Fill(ds1);
-            adapt2.Fill(ds2);
-            con.Close();
-            dgv_profile_express.DataSource = ds1.Tables[0];
-            dgv_profile_graduate.DataSource = ds.Tables[0];
-            dgv_profile_languageskill.DataSource = ds2.Tables[0];
+            dgv_profile_graduate.ColumnCount = 7;
+            dgv_profile_graduate.Columns[1].Name = "SchoolName";
+            dgv_profile_graduate.Columns[2].Name = "Department";
+            dgv_profile_graduate.Columns[3].Name = "DateStart";
+            dgv_profile_graduate.Columns[4].Name = "DateEnd";
+            dgv_profile_graduate.Columns[5].Name = "Graduate";
+            dgv_profile_graduate.Columns[6].Name = "Note";
+            string[] row = new string[] { };
+            dgv_profile_graduate.Rows.Add(row);
+        }
+
+        private void btn_profile_express_Click(object sender, EventArgs e)
+        {
+            dgv_profile_express.ColumnCount = 8;
+            dgv_profile_express.Columns[1].Name = "CompanyName";
+            dgv_profile_express.Columns[2].Name = "Title";
+            dgv_profile_express.Columns[3].Name = "DateStart";
+            dgv_profile_express.Columns[4].Name = "DateEnd";
+            dgv_profile_express.Columns[5].Name = "SatartSalary";
+            dgv_profile_express.Columns[6].Name = "EndSalary";
+            dgv_profile_express.Columns[7].Name = "LeaveReason";
+            string[] row = new string[] { };
+            dgv_profile_express.Rows.Add(row);
+        }
+
+        private void btn_profile_languageskill_Click(object sender, EventArgs e)
+        {
+            dgv_profile_languageskill.ColumnCount = 6;
+            dgv_profile_languageskill.Columns[1].Name = "Language";
+            dgv_profile_languageskill.Columns[2].Name = "Listen";
+            dgv_profile_languageskill.Columns[3].Name = "Speak";
+            dgv_profile_languageskill.Columns[4].Name = "Read";
+            dgv_profile_languageskill.Columns[5].Name = "Write";
+            string[] row1 = new string[] { };
+            dgv_profile_languageskill.Rows.Add(row1);
         }
     }
 }
+
