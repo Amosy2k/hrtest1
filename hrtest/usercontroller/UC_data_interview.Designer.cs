@@ -86,7 +86,7 @@
             this.lb_profile_devops_others = new System.Windows.Forms.Label();
             this.tb_profile_developtool_others = new System.Windows.Forms.TextBox();
             this.lb_profile_developtool_others = new System.Windows.Forms.Label();
-            this.tb_profile_programlanguage = new System.Windows.Forms.TextBox();
+            this.tb_profile_programlanguage_others = new System.Windows.Forms.TextBox();
             this.lb_profile_programlanguage_other = new System.Windows.Forms.Label();
             this.clb_profile_programlanguage = new System.Windows.Forms.CheckedListBox();
             this.clb_profile_developetools = new System.Windows.Forms.CheckedListBox();
@@ -98,6 +98,7 @@
             this.btn_profile_languageskill = new System.Windows.Forms.Button();
             this.lb_profile_languageskill = new System.Windows.Forms.Label();
             this.dgv_profile_languageskill = new System.Windows.Forms.DataGridView();
+            this.LanguageDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lb_profile_cert = new System.Windows.Forms.Label();
             this.lb_profile_database = new System.Windows.Forms.Label();
             this.lb_profile_bigdata = new System.Windows.Forms.Label();
@@ -112,6 +113,7 @@
             this.btn_profile_express = new System.Windows.Forms.Button();
             this.lb_profile_express = new System.Windows.Forms.Label();
             this.dgv_profile_express = new System.Windows.Forms.DataGridView();
+            this.ExperienceDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_profile_graduate = new System.Windows.Forms.Button();
             this.lb_profile_graduate = new System.Windows.Forms.Label();
             this.dgv_profile_graduate = new System.Windows.Forms.DataGridView();
@@ -165,8 +167,6 @@
             this.rb_result_no = new System.Windows.Forms.RadioButton();
             this.rb_result_yes = new System.Windows.Forms.RadioButton();
             this.btn_result_commandcreate = new System.Windows.Forms.Button();
-            this.ExperienceDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.LanguageDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tc_interview.SuspendLayout();
             this.tp_profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_profile_languageskill)).BeginInit();
@@ -252,7 +252,7 @@
             this.tp_profile.Controls.Add(this.lb_profile_devops_others);
             this.tp_profile.Controls.Add(this.tb_profile_developtool_others);
             this.tp_profile.Controls.Add(this.lb_profile_developtool_others);
-            this.tp_profile.Controls.Add(this.tb_profile_programlanguage);
+            this.tp_profile.Controls.Add(this.tb_profile_programlanguage_others);
             this.tp_profile.Controls.Add(this.lb_profile_programlanguage_other);
             this.tp_profile.Controls.Add(this.clb_profile_programlanguage);
             this.tp_profile.Controls.Add(this.clb_profile_developetools);
@@ -677,15 +677,15 @@
             // 
             // tb_profile_cert_others
             // 
-            this.tb_profile_cert_others.Location = new System.Drawing.Point(649, 720);
+            this.tb_profile_cert_others.Location = new System.Drawing.Point(836, 720);
             this.tb_profile_cert_others.Name = "tb_profile_cert_others";
-            this.tb_profile_cert_others.Size = new System.Drawing.Size(472, 22);
+            this.tb_profile_cert_others.Size = new System.Drawing.Size(285, 22);
             this.tb_profile_cert_others.TabIndex = 101;
             // 
             // lb_profile_cert_others
             // 
             this.lb_profile_cert_others.AutoSize = true;
-            this.lb_profile_cert_others.Location = new System.Drawing.Point(614, 730);
+            this.lb_profile_cert_others.Location = new System.Drawing.Point(792, 723);
             this.lb_profile_cert_others.Name = "lb_profile_cert_others";
             this.lb_profile_cert_others.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_cert_others.TabIndex = 100;
@@ -693,15 +693,15 @@
             // 
             // tb_profile_database_others
             // 
-            this.tb_profile_database_others.Location = new System.Drawing.Point(559, 695);
+            this.tb_profile_database_others.Location = new System.Drawing.Point(836, 695);
             this.tb_profile_database_others.Name = "tb_profile_database_others";
-            this.tb_profile_database_others.Size = new System.Drawing.Size(562, 22);
+            this.tb_profile_database_others.Size = new System.Drawing.Size(285, 22);
             this.tb_profile_database_others.TabIndex = 99;
             // 
             // lb_profile_database_others
             // 
             this.lb_profile_database_others.AutoSize = true;
-            this.lb_profile_database_others.Location = new System.Drawing.Point(524, 705);
+            this.lb_profile_database_others.Location = new System.Drawing.Point(792, 698);
             this.lb_profile_database_others.Name = "lb_profile_database_others";
             this.lb_profile_database_others.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_database_others.TabIndex = 98;
@@ -709,15 +709,15 @@
             // 
             // tb_profile_bigdata_others
             // 
-            this.tb_profile_bigdata_others.Location = new System.Drawing.Point(506, 672);
+            this.tb_profile_bigdata_others.Location = new System.Drawing.Point(835, 672);
             this.tb_profile_bigdata_others.Name = "tb_profile_bigdata_others";
-            this.tb_profile_bigdata_others.Size = new System.Drawing.Size(615, 22);
+            this.tb_profile_bigdata_others.Size = new System.Drawing.Size(286, 22);
             this.tb_profile_bigdata_others.TabIndex = 97;
             // 
             // lb_profile_bigdata_others
             // 
             this.lb_profile_bigdata_others.AutoSize = true;
-            this.lb_profile_bigdata_others.Location = new System.Drawing.Point(471, 681);
+            this.lb_profile_bigdata_others.Location = new System.Drawing.Point(792, 675);
             this.lb_profile_bigdata_others.Name = "lb_profile_bigdata_others";
             this.lb_profile_bigdata_others.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_bigdata_others.TabIndex = 96;
@@ -725,15 +725,15 @@
             // 
             // tb_profile_os_others
             // 
-            this.tb_profile_os_others.Location = new System.Drawing.Point(616, 647);
+            this.tb_profile_os_others.Location = new System.Drawing.Point(835, 647);
             this.tb_profile_os_others.Name = "tb_profile_os_others";
-            this.tb_profile_os_others.Size = new System.Drawing.Size(505, 22);
+            this.tb_profile_os_others.Size = new System.Drawing.Size(286, 22);
             this.tb_profile_os_others.TabIndex = 95;
             // 
             // lb_profile_os_others
             // 
             this.lb_profile_os_others.AutoSize = true;
-            this.lb_profile_os_others.Location = new System.Drawing.Point(581, 657);
+            this.lb_profile_os_others.Location = new System.Drawing.Point(792, 652);
             this.lb_profile_os_others.Name = "lb_profile_os_others";
             this.lb_profile_os_others.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_os_others.TabIndex = 94;
@@ -741,15 +741,15 @@
             // 
             // tb_profile_devops_others
             // 
-            this.tb_profile_devops_others.Location = new System.Drawing.Point(616, 624);
+            this.tb_profile_devops_others.Location = new System.Drawing.Point(835, 624);
             this.tb_profile_devops_others.Name = "tb_profile_devops_others";
-            this.tb_profile_devops_others.Size = new System.Drawing.Size(505, 22);
+            this.tb_profile_devops_others.Size = new System.Drawing.Size(286, 22);
             this.tb_profile_devops_others.TabIndex = 93;
             // 
             // lb_profile_devops_others
             // 
             this.lb_profile_devops_others.AutoSize = true;
-            this.lb_profile_devops_others.Location = new System.Drawing.Point(581, 634);
+            this.lb_profile_devops_others.Location = new System.Drawing.Point(792, 630);
             this.lb_profile_devops_others.Name = "lb_profile_devops_others";
             this.lb_profile_devops_others.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_devops_others.TabIndex = 92;
@@ -757,31 +757,31 @@
             // 
             // tb_profile_developtool_others
             // 
-            this.tb_profile_developtool_others.Location = new System.Drawing.Point(790, 599);
+            this.tb_profile_developtool_others.Location = new System.Drawing.Point(836, 599);
             this.tb_profile_developtool_others.Name = "tb_profile_developtool_others";
-            this.tb_profile_developtool_others.Size = new System.Drawing.Size(331, 22);
+            this.tb_profile_developtool_others.Size = new System.Drawing.Size(285, 22);
             this.tb_profile_developtool_others.TabIndex = 91;
             // 
             // lb_profile_developtool_others
             // 
             this.lb_profile_developtool_others.AutoSize = true;
-            this.lb_profile_developtool_others.Location = new System.Drawing.Point(750, 608);
+            this.lb_profile_developtool_others.Location = new System.Drawing.Point(792, 607);
             this.lb_profile_developtool_others.Name = "lb_profile_developtool_others";
             this.lb_profile_developtool_others.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_developtool_others.TabIndex = 90;
             this.lb_profile_developtool_others.Text = "其他";
             // 
-            // tb_profile_programlanguage
+            // tb_profile_programlanguage_others
             // 
-            this.tb_profile_programlanguage.Location = new System.Drawing.Point(790, 573);
-            this.tb_profile_programlanguage.Name = "tb_profile_programlanguage";
-            this.tb_profile_programlanguage.Size = new System.Drawing.Size(331, 22);
-            this.tb_profile_programlanguage.TabIndex = 89;
+            this.tb_profile_programlanguage_others.Location = new System.Drawing.Point(835, 571);
+            this.tb_profile_programlanguage_others.Name = "tb_profile_programlanguage_others";
+            this.tb_profile_programlanguage_others.Size = new System.Drawing.Size(286, 22);
+            this.tb_profile_programlanguage_others.TabIndex = 89;
             // 
             // lb_profile_programlanguage_other
             // 
             this.lb_profile_programlanguage_other.AutoSize = true;
-            this.lb_profile_programlanguage_other.Location = new System.Drawing.Point(750, 582);
+            this.lb_profile_programlanguage_other.Location = new System.Drawing.Point(792, 581);
             this.lb_profile_programlanguage_other.Name = "lb_profile_programlanguage_other";
             this.lb_profile_programlanguage_other.Size = new System.Drawing.Size(29, 12);
             this.lb_profile_programlanguage_other.TabIndex = 88;
@@ -802,7 +802,7 @@
             this.clb_profile_programlanguage.Location = new System.Drawing.Point(253, 573);
             this.clb_profile_programlanguage.MultiColumn = true;
             this.clb_profile_programlanguage.Name = "clb_profile_programlanguage";
-            this.clb_profile_programlanguage.Size = new System.Drawing.Size(481, 21);
+            this.clb_profile_programlanguage.Size = new System.Drawing.Size(521, 21);
             this.clb_profile_programlanguage.TabIndex = 87;
             // 
             // clb_profile_developetools
@@ -832,7 +832,7 @@
             this.clb_profile_devops.Location = new System.Drawing.Point(253, 626);
             this.clb_profile_devops.MultiColumn = true;
             this.clb_profile_devops.Name = "clb_profile_devops";
-            this.clb_profile_devops.Size = new System.Drawing.Size(320, 21);
+            this.clb_profile_devops.Size = new System.Drawing.Size(365, 21);
             this.clb_profile_devops.TabIndex = 85;
             // 
             // clb_profile_os
@@ -848,7 +848,7 @@
             this.clb_profile_os.Location = new System.Drawing.Point(253, 648);
             this.clb_profile_os.MultiColumn = true;
             this.clb_profile_os.Name = "clb_profile_os";
-            this.clb_profile_os.Size = new System.Drawing.Size(320, 21);
+            this.clb_profile_os.Size = new System.Drawing.Size(365, 21);
             this.clb_profile_os.TabIndex = 84;
             // 
             // clb_profile_bigdata
@@ -862,7 +862,7 @@
             this.clb_profile_bigdata.Location = new System.Drawing.Point(253, 673);
             this.clb_profile_bigdata.MultiColumn = true;
             this.clb_profile_bigdata.Name = "clb_profile_bigdata";
-            this.clb_profile_bigdata.Size = new System.Drawing.Size(212, 21);
+            this.clb_profile_bigdata.Size = new System.Drawing.Size(365, 21);
             this.clb_profile_bigdata.TabIndex = 83;
             // 
             // clb_profile_database
@@ -877,7 +877,7 @@
             this.clb_profile_database.Location = new System.Drawing.Point(253, 696);
             this.clb_profile_database.MultiColumn = true;
             this.clb_profile_database.Name = "clb_profile_database";
-            this.clb_profile_database.Size = new System.Drawing.Size(265, 21);
+            this.clb_profile_database.Size = new System.Drawing.Size(365, 21);
             this.clb_profile_database.TabIndex = 82;
             // 
             // clb_profile_cert
@@ -893,7 +893,7 @@
             this.clb_profile_cert.Location = new System.Drawing.Point(253, 721);
             this.clb_profile_cert.MultiColumn = true;
             this.clb_profile_cert.Name = "clb_profile_cert";
-            this.clb_profile_cert.Size = new System.Drawing.Size(347, 21);
+            this.clb_profile_cert.Size = new System.Drawing.Size(365, 21);
             this.clb_profile_cert.TabIndex = 81;
             // 
             // btn_profile_languageskill
@@ -930,6 +930,13 @@
             this.dgv_profile_languageskill.RowTemplate.Height = 24;
             this.dgv_profile_languageskill.Size = new System.Drawing.Size(923, 109);
             this.dgv_profile_languageskill.TabIndex = 43;
+            // 
+            // LanguageDelete
+            // 
+            this.LanguageDelete.HeaderText = "Delete";
+            this.LanguageDelete.Name = "LanguageDelete";
+            this.LanguageDelete.Text = "Delete";
+            this.LanguageDelete.UseColumnTextForButtonValue = true;
             // 
             // lb_profile_cert
             // 
@@ -1065,6 +1072,13 @@
             this.dgv_profile_express.RowTemplate.Height = 24;
             this.dgv_profile_express.Size = new System.Drawing.Size(916, 109);
             this.dgv_profile_express.TabIndex = 29;
+            // 
+            // ExperienceDelete
+            // 
+            this.ExperienceDelete.HeaderText = "Delete";
+            this.ExperienceDelete.Name = "ExperienceDelete";
+            this.ExperienceDelete.Text = "Delete";
+            this.ExperienceDelete.UseColumnTextForButtonValue = true;
             // 
             // btn_profile_graduate
             // 
@@ -1575,20 +1589,6 @@
             this.btn_result_commandcreate.Text = "新增面談評語";
             this.btn_result_commandcreate.UseVisualStyleBackColor = true;
             // 
-            // ExperienceDelete
-            // 
-            this.ExperienceDelete.HeaderText = "Delete";
-            this.ExperienceDelete.Name = "ExperienceDelete";
-            this.ExperienceDelete.Text = "Delete";
-            this.ExperienceDelete.UseColumnTextForButtonValue = true;
-            // 
-            // LanguageDelete
-            // 
-            this.LanguageDelete.HeaderText = "Delete";
-            this.LanguageDelete.Name = "LanguageDelete";
-            this.LanguageDelete.Text = "Delete";
-            this.LanguageDelete.UseColumnTextForButtonValue = true;
-            // 
             // UC_data_interview
             // 
             this.Controls.Add(this.tc_interview);
@@ -1711,7 +1711,7 @@
         private System.Windows.Forms.Label lb_profile_devops_others;
         private System.Windows.Forms.TextBox tb_profile_developtool_others;
         private System.Windows.Forms.Label lb_profile_developtool_others;
-        private System.Windows.Forms.TextBox tb_profile_programlanguage;
+        private System.Windows.Forms.TextBox tb_profile_programlanguage_others;
         private System.Windows.Forms.Label lb_profile_programlanguage_other;
         private System.Windows.Forms.CheckedListBox clb_profile_programlanguage;
         private System.Windows.Forms.CheckedListBox clb_profile_developetools;

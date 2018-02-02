@@ -200,12 +200,34 @@ namespace hrtest
                     {
                         throw ex;
                     }
+                    //skill
+                    cmd.CommandText = SqlInsert.SkillInsertmethod();
+                    try
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+                        cmd.Parameters.Add("@Language", SqlDbType.NChar).Value = Getskill(clb_profile_programlanguage, tb_profile_programlanguage_others.Text);
+                        cmd.Parameters.Add("@Developetools", SqlDbType.NChar).Value = Getskill(clb_profile_developetools, tb_profile_developtool_others.Text);
+                        cmd.Parameters.Add("@Devops", SqlDbType.NChar).Value = Getskill(clb_profile_devops, tb_profile_devops_others.Text);
+                        cmd.Parameters.Add("@Os", SqlDbType.NChar).Value = Getskill(clb_profile_os, tb_profile_os_others.Text);
+                        cmd.Parameters.Add("@Bigdata", SqlDbType.NChar).Value = Getskill(clb_profile_bigdata, tb_profile_bigdata_others.Text);
+                        cmd.Parameters.Add("@Database", SqlDbType.NChar).Value = Getskill(clb_profile_database, tb_profile_database_others.Text);
+                        cmd.Parameters.Add("@Cert", SqlDbType.NChar).Value = Getskill(clb_profile_cert, tb_profile_cert_others.Text);
+                        cmd.Parameters.Add("@Framwork", SqlDbType.NChar).Value = tb_profile_framwork.Text;
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
+
                     sqltr.Commit();
+                    MessageBox.Show("新增成功");
                 }
                 catch (Exception ex)
                 {
                     sqltr.Rollback();
-                    throw ex;
+                    MessageBox.Show(ex.Message, "新增失敗");
                 }
                 finally
                 {
@@ -217,9 +239,8 @@ namespace hrtest
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"新增失敗");    
+                throw ex;
             }
-            MessageBox.Show("新增成功");
         }
 
         private void btn_profile_graduate_Click(object sender, EventArgs e)
@@ -259,6 +280,26 @@ namespace hrtest
             dgv_profile_languageskill.Columns[5].Name = "Write";
             string[] row1 = new string[] { };
             dgv_profile_languageskill.Rows.Add(row1);
+        }
+
+        private string Getskill(CheckedListBox clb, string others)
+        {
+            string experience = string.Empty;
+            for(int i = 0; i < clb.Items.Count; i++)
+            {
+                if(clb.GetItemChecked(i))
+                {
+                    experience += clb.Items[i].ToString() + ",";
+                }
+            }
+
+            experience += others;
+
+            if(experience.EndsWith(","))
+            {
+                experience = experience.Remove(experience.Length - 1);
+            }
+            return experience;
         }
     }
 }
