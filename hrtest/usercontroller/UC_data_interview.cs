@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.IO;
 
 
 namespace hrtest
@@ -16,6 +17,7 @@ namespace hrtest
     public partial class UC_data_interview : UserControl
     {
         public event EventHandler deleteclick;
+        private string id;
 
         protected void ondeleteclick(EventArgs e)
         {
@@ -90,9 +92,45 @@ namespace hrtest
             }
         }
 
+        private string Img()
+        {
+            string targetPath = @"C:\test1";
+            string fileName = Path.GetFileName(pb_profile_profileimg.ImageLocation ?? string.Empty);
+            string dateTime = DateTime.Now.ToString("yyyyMMddhhmmss");
+            string destFile = Path.Combine(targetPath, dateTime + fileName);
+            try
+            {
+                if (Directory.Exists(targetPath))
+                {
+                    Directory.CreateDirectory(targetPath);
+                }
+                File.Copy(pb_profile_profileimg.ImageLocation, destFile, true);
+
+                if (Directory.Exists(pb_profile_profileimg.ImageLocation))
+                {
+                    string[] files = Directory.GetFiles(pb_profile_profileimg.ImageLocation);
+
+                    // Copy the files and overwrite destination files if they already exist.
+                    foreach (string s in files)
+                    {
+                        // Use static Path methods to extract only the file name from the path.
+                        fileName = Path.GetFileName(s);
+                        destFile = Path.Combine(targetPath, fileName);
+                        File.Copy(s, destFile, true);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return destFile;
+
+        }
+
         private void btn_profile_OK_Click(object sender, EventArgs e)
         {
-            string id;
             lb_project_lastpdatetimetm.Text = DateTime.Now.ToString();
             try
             {
@@ -132,7 +170,7 @@ namespace hrtest
                     cmd.Parameters.Add("@ShowYourSelf", SqlDbType.VarChar).Value = tb_profile_ShowYourSelf.Text;
                     cmd.Parameters.Add("@Armydate", SqlDbType.NChar).Value = tb_profile_armyitem.Text;
                     cmd.Parameters.Add("@NonArmyReason", SqlDbType.NChar).Value = tb_profile_NonArmyReason.Text;
-                    cmd.Parameters.Add("@Img", SqlDbType.NChar).Value = DBNull.Value; //pb_profile_profileimg.Location;
+                    cmd.Parameters.Add("@Img", SqlDbType.NChar).Value = Img();
                     cmd.Parameters.Add("@LastUpdatetime", SqlDbType.DateTime).Value = DateTime.Now;
                     id = cmd.ExecuteScalar().ToString();
                     //education add
@@ -278,16 +316,16 @@ namespace hrtest
             dgv_profile_languageskill.Columns[3].Name = "Speak";
             dgv_profile_languageskill.Columns[4].Name = "Read";
             dgv_profile_languageskill.Columns[5].Name = "Write";
-            string[] row1 = new string[] { };
-            dgv_profile_languageskill.Rows.Add(row1);
+            string[] row = new string[] { };
+            dgv_profile_languageskill.Rows.Add(row);
         }
 
         private string Getskill(CheckedListBox clb, string others)
         {
             string experience = string.Empty;
-            for(int i = 0; i < clb.Items.Count; i++)
+            for (int i = 0; i < clb.Items.Count; i++)
             {
-                if(clb.GetItemChecked(i))
+                if (clb.GetItemChecked(i))
                 {
                     experience += clb.Items[i].ToString() + ",";
                 }
@@ -295,11 +333,110 @@ namespace hrtest
 
             experience += others;
 
-            if(experience.EndsWith(","))
+            if (experience.EndsWith(","))
             {
                 experience = experience.Remove(experience.Length - 1);
             }
             return experience;
+        }
+
+        private void dgv_profile_graduate_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            if (dgv_profile_graduate.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Delete")
+            {
+                DialogResult dr = MessageBox.Show("刪除", "確定刪除嗎?", MessageBoxButtons.OKCancel);
+                switch (dr)
+                {
+                    case DialogResult.OK:
+                        dgv_profile_graduate.Rows.RemoveAt(e.RowIndex);
+                        break;
+                    case DialogResult.Cancel:
+                        break;
+                }
+            }
+        }
+
+        private void dgv_profile_express_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            if (dgv_profile_express.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Delete")
+            {
+                DialogResult dr = MessageBox.Show("刪除", "確定刪除嗎?", MessageBoxButtons.OKCancel);
+                switch (dr)
+                {
+                    case DialogResult.OK:
+                        dgv_profile_express.Rows.RemoveAt(e.RowIndex);
+                        break;
+                    case DialogResult.Cancel:
+                        break;
+                }
+            }
+        }
+
+        private void dgv_profile_languageskill_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            if (dgv_profile_languageskill.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Delete")
+            {
+                DialogResult dr = MessageBox.Show("刪除", "確定刪除嗎?", MessageBoxButtons.OKCancel);
+                switch (dr)
+                {
+                    case DialogResult.OK:
+                        dgv_profile_languageskill.Rows.RemoveAt(e.RowIndex);
+                        break;
+                    case DialogResult.Cancel:
+                        break;
+                }
+            }
+        }
+
+        private void btn_project_ok_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Company");
+                dt.Columns.Add("Projectname");
+                dt.Columns.Add("OS");
+                dt.Columns.Add("DB");
+                dt.Columns.Add("Scrib");
+                dt.Columns.Add("Title");
+                dt.Columns.Add("Date");
+                dt.Columns.Add("Programlanguage");
+                dt.Columns.Add("Programtools");
+
+
+                if (string.IsNullOrEmpty(id))
+                {
+                    MessageBox.Show("請先建立人事資料");
+                    return;
+                }
+                
+                foreach(Control c in tlp_project_list.Controls)
+                {
+                    if(c is UC_data_project)
+                    {
+                        UC_data_project uC_Data_Project = new UC_data_project();
+                        uC_Data_Project = (UC_data_project)c;
+                        uC_Data_Project.Getdata();
+                    }
+                }
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }

@@ -26,21 +26,38 @@ namespace hrtest
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("是否要刪除資料","警告", MessageBoxButtons.YesNo);
-            if(result == DialogResult.Yes)
+            DialogResult result = MessageBox.Show("是否要刪除資料", "警告", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
                 ondeleteclick(e);
             }
         }
 
-        private void btn_profile_interviewdate_Click(object sender, EventArgs e)
+        public DataTable Getdata()
         {
-            data.frm_data_calander calander = new data.frm_data_calander();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Company");
+            dt.Columns.Add("Projectname");
+            dt.Columns.Add("OS");
+            dt.Columns.Add("DB");
+            dt.Columns.Add("Scrib");
+            dt.Columns.Add("Title");
+            dt.Columns.Add("Date");
+            dt.Columns.Add("Programlanguage");
+            dt.Columns.Add("Programtools");
+            dt.Rows.Add(tb_company.Text, tb_project.Text, tb_os.Text, tb_db.Text, rtb_scribe.Text, tb_title.Text, tb_date.Text, tb_language.Text, tb_tools.Text);
 
-            if (calander.ShowDialog() == DialogResult.OK)
-            {
-                tb_date.Text = calander.Calandervalue;
-            }
+            DataRow dr = dt.NewRow();
+            dr[0] = tb_company.Text;
+            dr[1] = tb_project.Text;
+            dr[2] = tb_os.Text;
+            dr[3] = tb_db.Text;
+            dr[4] = rtb_scribe.Text;
+            dr[5] = tb_title.Text;
+            dr[6] = tb_date.Text;
+            dr[7] = tb_language.Text;
+            dr[8] = tb_tools.Text;
+            return dt;
         }
     }
 }

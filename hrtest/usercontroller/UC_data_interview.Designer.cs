@@ -519,7 +519,7 @@
             // 
             this.tb_profile_disadvantage.Location = new System.Drawing.Point(641, 972);
             this.tb_profile_disadvantage.Name = "tb_profile_disadvantage";
-            this.tb_profile_disadvantage.Size = new System.Drawing.Size(475, 22);
+            this.tb_profile_disadvantage.Size = new System.Drawing.Size(494, 22);
             this.tb_profile_disadvantage.TabIndex = 121;
             // 
             // lb_profile_disadvantage
@@ -551,7 +551,7 @@
             // 
             this.tb_profile_registdate.Location = new System.Drawing.Point(997, 945);
             this.tb_profile_registdate.Name = "tb_profile_registdate";
-            this.tb_profile_registdate.Size = new System.Drawing.Size(119, 22);
+            this.tb_profile_registdate.Size = new System.Drawing.Size(138, 22);
             this.tb_profile_registdate.TabIndex = 117;
             // 
             // lb_profile_register
@@ -599,7 +599,7 @@
             // 
             this.tb_profile_friendname.Location = new System.Drawing.Point(997, 916);
             this.tb_profile_friendname.Name = "tb_profile_friendname";
-            this.tb_profile_friendname.Size = new System.Drawing.Size(119, 22);
+            this.tb_profile_friendname.Size = new System.Drawing.Size(138, 22);
             this.tb_profile_friendname.TabIndex = 111;
             // 
             // lb_profile_friendname
@@ -930,6 +930,7 @@
             this.dgv_profile_languageskill.RowTemplate.Height = 24;
             this.dgv_profile_languageskill.Size = new System.Drawing.Size(923, 109);
             this.dgv_profile_languageskill.TabIndex = 43;
+            this.dgv_profile_languageskill.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_profile_languageskill_CellContentClick);
             // 
             // LanguageDelete
             // 
@@ -1072,6 +1073,7 @@
             this.dgv_profile_express.RowTemplate.Height = 24;
             this.dgv_profile_express.Size = new System.Drawing.Size(916, 109);
             this.dgv_profile_express.TabIndex = 29;
+            this.dgv_profile_express.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_profile_express_CellContentClick);
             // 
             // ExperienceDelete
             // 
@@ -1114,6 +1116,7 @@
             this.dgv_profile_graduate.RowTemplate.Height = 24;
             this.dgv_profile_graduate.Size = new System.Drawing.Size(916, 109);
             this.dgv_profile_graduate.TabIndex = 26;
+            this.dgv_profile_graduate.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_profile_graduate_CellContentClick);
             // 
             // EducationDelete
             // 
@@ -1394,6 +1397,7 @@
             this.btn_project_ok.TabIndex = 17;
             this.btn_project_ok.Text = "確認";
             this.btn_project_ok.UseVisualStyleBackColor = true;
+            this.btn_project_ok.Click += new System.EventHandler(this.btn_project_ok_Click);
             // 
             // lb_project_lastpdatetimetm
             // 

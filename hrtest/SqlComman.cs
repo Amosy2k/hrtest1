@@ -81,6 +81,11 @@ namespace hrtest
         {
             return @"INSERT INTO [dbo].[Skill]([ID],[Language],[Developetools],[Devops],[Os],[Bigdata],[Database],[Cert],[Framwork])VALUES(@ID,@Language,@Developetools,@Devops,@Os,@Bigdata,@Database,@Cert,@Framwork)";
         }
+
+        public static string Projectmethod()
+        {
+            return @"INSERT INTO [dbo].[Project]([ID],[Company],[Projectname],[OS],[DB],[Scrib],[Title],[Date],[Programlanguage],[Programtools])VALUES(@ID,@Company,@Projectname,@OS,@DB,@Scrib,@Title,@Date,@Programlanguage,@Programtools)";
+        }
     }
 
 

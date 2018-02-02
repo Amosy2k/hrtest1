@@ -47,13 +47,12 @@
             this.lb_projectscribe = new System.Windows.Forms.Label();
             this.rtb_scribe = new System.Windows.Forms.RichTextBox();
             this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_profile_interviewdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lb_company
             // 
             this.lb_company.AutoSize = true;
-            this.lb_company.Location = new System.Drawing.Point(52, 31);
+            this.lb_company.Location = new System.Drawing.Point(12, 12);
             this.lb_company.Name = "lb_company";
             this.lb_company.Size = new System.Drawing.Size(65, 12);
             this.lb_company.TabIndex = 0;
@@ -61,14 +60,14 @@
             // 
             // tb_company
             // 
-            this.tb_company.Location = new System.Drawing.Point(139, 21);
+            this.tb_company.Location = new System.Drawing.Point(83, 9);
             this.tb_company.Name = "tb_company";
             this.tb_company.Size = new System.Drawing.Size(203, 22);
             this.tb_company.TabIndex = 1;
             // 
             // tb_project
             // 
-            this.tb_project.Location = new System.Drawing.Point(139, 64);
+            this.tb_project.Location = new System.Drawing.Point(83, 37);
             this.tb_project.Name = "tb_project";
             this.tb_project.Size = new System.Drawing.Size(203, 22);
             this.tb_project.TabIndex = 3;
@@ -76,7 +75,7 @@
             // lb_project
             // 
             this.lb_project.AutoSize = true;
-            this.lb_project.Location = new System.Drawing.Point(52, 74);
+            this.lb_project.Location = new System.Drawing.Point(12, 40);
             this.lb_project.Name = "lb_project";
             this.lb_project.Size = new System.Drawing.Size(65, 12);
             this.lb_project.TabIndex = 2;
@@ -84,7 +83,7 @@
             // 
             // tb_os
             // 
-            this.tb_os.Location = new System.Drawing.Point(139, 109);
+            this.tb_os.Location = new System.Drawing.Point(83, 65);
             this.tb_os.Name = "tb_os";
             this.tb_os.Size = new System.Drawing.Size(203, 22);
             this.tb_os.TabIndex = 5;
@@ -92,7 +91,7 @@
             // lb_os
             // 
             this.lb_os.AutoSize = true;
-            this.lb_os.Location = new System.Drawing.Point(52, 119);
+            this.lb_os.Location = new System.Drawing.Point(12, 68);
             this.lb_os.Name = "lb_os";
             this.lb_os.Size = new System.Drawing.Size(65, 12);
             this.lb_os.TabIndex = 4;
@@ -100,7 +99,7 @@
             // 
             // tb_db
             // 
-            this.tb_db.Location = new System.Drawing.Point(139, 157);
+            this.tb_db.Location = new System.Drawing.Point(83, 93);
             this.tb_db.Name = "tb_db";
             this.tb_db.Size = new System.Drawing.Size(203, 22);
             this.tb_db.TabIndex = 7;
@@ -108,7 +107,7 @@
             // lb_database
             // 
             this.lb_database.AutoSize = true;
-            this.lb_database.Location = new System.Drawing.Point(52, 167);
+            this.lb_database.Location = new System.Drawing.Point(12, 96);
             this.lb_database.Name = "lb_database";
             this.lb_database.Size = new System.Drawing.Size(53, 12);
             this.lb_database.TabIndex = 6;
@@ -116,7 +115,7 @@
             // 
             // tb_title
             // 
-            this.tb_title.Location = new System.Drawing.Point(501, 21);
+            this.tb_title.Location = new System.Drawing.Point(375, 9);
             this.tb_title.Name = "tb_title";
             this.tb_title.Size = new System.Drawing.Size(223, 22);
             this.tb_title.TabIndex = 9;
@@ -124,7 +123,7 @@
             // lb_title
             // 
             this.lb_title.AutoSize = true;
-            this.lb_title.Location = new System.Drawing.Point(414, 31);
+            this.lb_title.Location = new System.Drawing.Point(304, 12);
             this.lb_title.Name = "lb_title";
             this.lb_title.Size = new System.Drawing.Size(41, 12);
             this.lb_title.TabIndex = 8;
@@ -132,7 +131,7 @@
             // 
             // tb_date
             // 
-            this.tb_date.Location = new System.Drawing.Point(501, 64);
+            this.tb_date.Location = new System.Drawing.Point(375, 37);
             this.tb_date.Name = "tb_date";
             this.tb_date.Size = new System.Drawing.Size(223, 22);
             this.tb_date.TabIndex = 11;
@@ -140,7 +139,7 @@
             // lb_date
             // 
             this.lb_date.AutoSize = true;
-            this.lb_date.Location = new System.Drawing.Point(414, 74);
+            this.lb_date.Location = new System.Drawing.Point(304, 40);
             this.lb_date.Name = "lb_date";
             this.lb_date.Size = new System.Drawing.Size(65, 12);
             this.lb_date.TabIndex = 10;
@@ -148,7 +147,7 @@
             // 
             // tb_language
             // 
-            this.tb_language.Location = new System.Drawing.Point(501, 109);
+            this.tb_language.Location = new System.Drawing.Point(375, 64);
             this.tb_language.Name = "tb_language";
             this.tb_language.Size = new System.Drawing.Size(223, 22);
             this.tb_language.TabIndex = 13;
@@ -156,7 +155,7 @@
             // lb_programlanguage
             // 
             this.lb_programlanguage.AutoSize = true;
-            this.lb_programlanguage.Location = new System.Drawing.Point(414, 119);
+            this.lb_programlanguage.Location = new System.Drawing.Point(304, 68);
             this.lb_programlanguage.Name = "lb_programlanguage";
             this.lb_programlanguage.Size = new System.Drawing.Size(65, 12);
             this.lb_programlanguage.TabIndex = 12;
@@ -164,7 +163,7 @@
             // 
             // tb_tools
             // 
-            this.tb_tools.Location = new System.Drawing.Point(501, 157);
+            this.tb_tools.Location = new System.Drawing.Point(375, 93);
             this.tb_tools.Name = "tb_tools";
             this.tb_tools.Size = new System.Drawing.Size(223, 22);
             this.tb_tools.TabIndex = 15;
@@ -172,7 +171,7 @@
             // lb_tools
             // 
             this.lb_tools.AutoSize = true;
-            this.lb_tools.Location = new System.Drawing.Point(414, 167);
+            this.lb_tools.Location = new System.Drawing.Point(304, 96);
             this.lb_tools.Name = "lb_tools";
             this.lb_tools.Size = new System.Drawing.Size(65, 12);
             this.lb_tools.TabIndex = 14;
@@ -181,7 +180,7 @@
             // lb_projectscribe
             // 
             this.lb_projectscribe.AutoSize = true;
-            this.lb_projectscribe.Location = new System.Drawing.Point(52, 198);
+            this.lb_projectscribe.Location = new System.Drawing.Point(12, 128);
             this.lb_projectscribe.Name = "lb_projectscribe";
             this.lb_projectscribe.Size = new System.Drawing.Size(65, 12);
             this.lb_projectscribe.TabIndex = 16;
@@ -189,15 +188,15 @@
             // 
             // rtb_scribe
             // 
-            this.rtb_scribe.Location = new System.Drawing.Point(139, 198);
+            this.rtb_scribe.Location = new System.Drawing.Point(83, 128);
             this.rtb_scribe.Name = "rtb_scribe";
-            this.rtb_scribe.Size = new System.Drawing.Size(669, 154);
+            this.rtb_scribe.Size = new System.Drawing.Size(515, 154);
             this.rtb_scribe.TabIndex = 17;
             this.rtb_scribe.Text = "";
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(770, 21);
+            this.btn_delete.Location = new System.Drawing.Point(618, 12);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(75, 23);
             this.btn_delete.TabIndex = 18;
@@ -205,22 +204,12 @@
             this.btn_delete.UseVisualStyleBackColor = true;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
-            // btn_profile_interviewdate
-            // 
-            this.btn_profile_interviewdate.Image = global::hrtest.Properties.Resources.calander;
-            this.btn_profile_interviewdate.Location = new System.Drawing.Point(757, 52);
-            this.btn_profile_interviewdate.Name = "btn_profile_interviewdate";
-            this.btn_profile_interviewdate.Size = new System.Drawing.Size(32, 34);
-            this.btn_profile_interviewdate.TabIndex = 140;
-            this.btn_profile_interviewdate.UseVisualStyleBackColor = true;
-            this.btn_profile_interviewdate.Click += new System.EventHandler(this.btn_profile_interviewdate_Click);
-            // 
             // UC_data_project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Controls.Add(this.btn_profile_interviewdate);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.rtb_scribe);
             this.Controls.Add(this.lb_projectscribe);
@@ -241,7 +230,7 @@
             this.Controls.Add(this.tb_company);
             this.Controls.Add(this.lb_company);
             this.Name = "UC_data_project";
-            this.Size = new System.Drawing.Size(884, 389);
+            this.Size = new System.Drawing.Size(696, 285);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,6 +257,5 @@
         private System.Windows.Forms.Label lb_projectscribe;
         private System.Windows.Forms.RichTextBox rtb_scribe;
         private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.Button btn_profile_interviewdate;
     }
 }
